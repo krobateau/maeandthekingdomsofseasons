@@ -33,6 +33,7 @@ jobs:
         local-dir: ./wp-template/
         server-dir: MaeandtheKingdomsofSeasons/wp-content/themes/mae-and-the-kingdoms-of-seasons-test/
         dry-run: true
+        log-level: verbose
       
   deploy:
     needs: [build]
