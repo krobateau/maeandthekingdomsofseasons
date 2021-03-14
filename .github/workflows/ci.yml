@@ -22,6 +22,8 @@ jobs:
     steps:
     - name: Get latest code
       uses: actions/checkout@v2
+    - name: Install rclone
+      run: apt-get install rclone
     - name: Sync files
       run: |
         mkdir -p ~/.config/rclone
