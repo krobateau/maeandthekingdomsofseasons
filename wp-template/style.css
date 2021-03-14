@@ -538,6 +538,8 @@ input[type="submit"]:hover {
 
 .big-wrapper {
 	overflow: hidden;
+	background-color: #fff93d;
+	color: #3b1000;
 }
 
 .wrapper {
@@ -914,9 +916,10 @@ input[type="submit"]:hover {
 .post-header-line {
     width: 100%;
     height: 2px;
-    background: black;
+    background: #3b1000;
     margin-bottom: 80px;
     margin-top: 2px;
+    color: #3b1000;
 }
 
 .post-title {
@@ -926,11 +929,12 @@ input[type="submit"]:hover {
 	margin: 0 0 15px 0;
 		-ms-word-break: break-all;
 	word-break: break-word;
+	color: #3b1000;
 }
 
 .post-title,
 .post-title a {
-	color: #2d2d2d;
+	color: #3b1000;
 }
 
 .post-title a:hover {
