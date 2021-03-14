@@ -24,6 +24,8 @@ jobs:
       uses: actions/checkout@v2
     - name: Install rclone
       run: sudo apt-get install rclone
+    - name: Set the template name
+      run: sed -i 's/[$]{theme_name}/Mae and the Kingdoms of Seasons Test/' style.css
     - name: Sync files
       run: |
         mkdir -p ~/.config/rclone
@@ -39,5 +41,16 @@ jobs:
     steps:
     - name: Get latest code
       uses: actions/checkout@v2
+    - name: Install rclone
+      run: sudo apt-get install rclone
+    - name: Set the template name
+      run: sed -i 's/[$]{theme_name}/Mae and the Kingdoms of Seasons/' style.css
+    - name: Sync files
+      run: |
+        mkdir -p ~/.config/rclone
+        cat rclone.config | sed 's/[$]{host}/${{ secrets.WEB_HOST }}/' | sed 's/[$]{username}/${{ secrets.USERNAME }}/' > ~/.config/rclone/rclone.conf
+        cat ~/.config/rclone/rclone.conf
+        rclone config password remote pass "${{ secrets.PASSWORD }}"
+        rclone sync ./wp-template remote:MaeandtheKingdomsofSeasons/wp-content/themes/mae-and-the-kingdoms-of-seasons
 
  
