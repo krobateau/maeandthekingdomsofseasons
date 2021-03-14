@@ -30,7 +30,7 @@ jobs:
         cat rclone.config | sed 's/[$]{host}/${{ secrets.WEB_HOST }}/' | sed 's/[$]{username}/${{ secrets.USERNAME }}/' > ~/.config/rclone/rclone.conf
         cat ~/.config/rclone/rclone.conf
         rclone config password remote pass "${{ secrets.PASSWORD }}"
-        rclone rclone sync -i ./wp-template remote:MaeandtheKingdomsofSeasons/wp-content/themes/mae-and-the-kingdoms-of-seasons-test
+        rclone sync -i ./wp-template remote:MaeandtheKingdomsofSeasons/wp-content/themes/mae-and-the-kingdoms-of-seasons-test
       
   deploy:
     needs: [build]
