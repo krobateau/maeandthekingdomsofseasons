@@ -1,0 +1,29 @@
+.m0 table {
+	margin-top:0; 
+	margin-bottom:0;
+	:nth-child(odd) {background-color: #bae8ff;}
+}
+.m0 tbody {
+	border-width:0;
+}
+.m0 td {
+	border-width:0;
+}
+.m0 tr:nth-child(odd) {
+	background-color: #98cae3;
+}
+
+.m0 tr:nth-child(odd) td {
+	text-align: center;
+}
+
+.m0 {
+	border-left: 1px solid #0b280c;
+	border-right: 1px solid #0b280c;
+	border-bottom: 1px solid #0b280c;
+}
+
+hr.m0 {
+	height: 1px;
+	width: 100px;
+}
