@@ -25,7 +25,7 @@ jobs:
     - name: FTP Deploy
       uses: fabeabe/git-sftp-action@1.1.1
       with:
-        url: sftp://${{ secrets.WEB_HOST }}:22/MaeandtheKingdomsofSeasons/wp-content/themes/mae-and-the-kingdoms-of-seasons-test
+        url: sftp://${{ secrets.WEB_HOST }}/MaeandtheKingdomsofSeasons/wp-content/themes/mae-and-the-kingdoms-of-seasons-test
         user: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         syncroot: ./wp-template/
