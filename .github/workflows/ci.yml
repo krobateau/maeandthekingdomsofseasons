@@ -23,17 +23,6 @@ jobs:
     - name: Get latest code
       uses: actions/checkout@v2
 
-    - name: 🚛 Publish test template
-    - uses: SamKirkland/FTP-Deploy-Action@4.0.0
-      with:
-        server: ${{ secrets.WEB_HOST }}
-        username: ${{ secrets.USERNAME }}
-        password: ${{ secrets.PASSWORD }}
-        port: 22
-        protocol: ftps
-        local-dir: ./wp-template/
-        server-dir: MaeandtheKingdomsofSeasons/wp-content/themes/mae-and-the-kingdoms-of-seasons-test/
-        dry-run: true
    
   deploy:
     needs: [build]
@@ -43,15 +32,4 @@ jobs:
     - name: Get latest code
       uses: actions/checkout@v2
 
-    - name: 🚛 Publish production template
-    - uses: SamKirkland/FTP-Deploy-Action@4.0.0
-      with:
-        server: ${{ secrets.WEB_HOST }}
-        username: ${{ secrets.USERNAME }}
-        password: ${{ secrets.PASSWORD }}
-        port: 22
-        protocol: ftps
-        local-dir: ./wp-template/
-        server-dir: MaeandtheKingdomsofSeasons/wp-content/themes/mae-and-the-kingdoms-of-seasons/
-        dry-run: true
  
