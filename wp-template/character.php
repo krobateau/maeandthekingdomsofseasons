@@ -19,7 +19,7 @@ body {font-family: Arial;}
   padding: 4px 6px;
   transition: 0.3s;
   font-size: 16px;
-  color: black;
+  color: white;
   border-radius: 0px;
 }
 
