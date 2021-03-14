@@ -15,3 +15,36 @@ jobs:
     - name: Run a one-line script
       run: echo Hello, world!
 
+  deploy_test:
+    needs: [build]
+    if: github.ref != 'refs/heads/main'
+    steps:
+    - name: 🚛 Publish test template
+    - uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      with:
+        server: ${{ secrets.WEB_HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        port: 22
+        protocol: ftps
+        local-dir: ./wp-template/
+        server-dir: MaeandtheKingdomsofSeasons/wp-content/themes/mae-and-the-kingdoms-of-seasons-test/
+        dry-run: true
+   
+  deploy:
+    needs: [build]
+    if: github.ref == 'refs/heads/main'
+    steps:
+    - name: 🚛 Publish production template
+    - uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      with:
+        server: ${{ secrets.WEB_HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        port: 22
+        protocol: ftps
+        local-dir: ./wp-template/
+        server-dir: MaeandtheKingdomsofSeasons/wp-content/themes/mae-and-t
+he-kingdoms-of-seasons/
+        dry-run: true
+ 
