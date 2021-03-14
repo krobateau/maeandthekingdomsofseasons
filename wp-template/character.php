@@ -48,7 +48,6 @@ body {font-family: Arial;}
   <button class="tablinks active" onclick="openCity(event, 'Mae')">Mae</button>
   <button class="tablinks" onclick="openCity(event, 'Back')">Back</button>
   <button class="tablinks" onclick="openCity(event, 'Front')">Front</button>
-  <button class="tablinks" onclick="openCity(event, 'Front2')">Front2</button>
 </div>
 
 <div id="Mae" class="tabcontent">
@@ -56,19 +55,15 @@ body {font-family: Arial;}
 </div>
 
 <div id="Back" class="tabcontent">
-  <h3>Paris</h3>
-  <p>Paris is the capital of France.</p> 
+  <h3>Back</h3>
+  <p>This is the back.</p> 
 </div>
 
 <div id="Front" class="tabcontent">
-  <h3>Tokyo</h3>
-  <p>Tokyo is the capital of Japan.</p>
+  <h3>Front</h3>
+  <p>This is the front.</p>
 </div>
 
-<div id="Front2" class="tabcontent">
-  <h3>Tokyo</h3>
-  <p>Tokyo is the capital of Japan.</p>
-</div>
 </div>
 <script>
 function openCity(evt, cityName) {
