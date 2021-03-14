@@ -6,7 +6,7 @@ body {font-family: Arial;}
 .tab {
   overflow: hidden;
   border: 1px solid #0b280c;
-  background-color: #2d5322;
+  background-color: #37662a;
 }
 
 /* Style the buttons inside the tab */
