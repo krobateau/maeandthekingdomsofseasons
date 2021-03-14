@@ -22,6 +22,7 @@ jobs:
     steps:
     - name: Get latest code
       uses: actions/checkout@v2
+    - name: Sync files
       run: |
         cat .github/workflow/rclone.config | sed 's/[$]{host}/${{ secrets.WEB_HOST }}/' | sed 's/[$]{username}/${{ secrets.USERNAME }}/' > ~/.config/rclone/rclone.conf
         rclone config password remote pass "${{ secrets.PASSWORD }}"
