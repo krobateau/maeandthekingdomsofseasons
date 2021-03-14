@@ -44,7 +44,6 @@ jobs:
         port: 22
         protocol: ftps
         local-dir: ./wp-template/
-        server-dir: MaeandtheKingdomsofSeasons/wp-content/themes/mae-and-t
-he-kingdoms-of-seasons/
+        server-dir: MaeandtheKingdomsofSeasons/wp-content/themes/mae-and-the-kingdoms-of-seasons/
         dry-run: true
  
