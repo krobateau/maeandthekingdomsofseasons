@@ -23,17 +23,13 @@ jobs:
     - name: Get latest code
       uses: actions/checkout@v2
     - name: FTP Deploy
-      uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      uses: fabeabe/git-sftp-action@1.1.1
       with:
-        server: ${{ secrets.WEB_HOST }}
-        username: ${{ secrets.USERNAME }}
+        url: sftp://${{ secrets.WEB_HOST }}:22/MaeandtheKingdomsofSeasons/wp-content/themes/mae-and-the-kingdoms-of-seasons-test
+        user: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
-        port: 22
-        protocol: ftps
-        local-dir: ./wp-template/
-        server-dir: MaeandtheKingdomsofSeasons/wp-content/themes/mae-and-the-kingdoms-of-seasons-test/
-        dry-run: true
-        log-level: verbose
+        syncroot: ./wp-template/
+        options: --dry-run --verbose
       
   deploy:
     needs: [build]
