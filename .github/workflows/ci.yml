@@ -22,14 +22,10 @@ jobs:
     steps:
     - name: Get latest code
       uses: actions/checkout@v2
-    - name: FTP Deploy
-      uses: fabeabe/git-sftp-action@1.1.1
-      with:
-        url: sftp://home183864420.1and1-data.host/MaeandtheKingdomsofSeasons/wp-content/themes/mae-and-the-kingdoms-of-seasons-test
-        user: ${{ secrets.USERNAME }}
-        password: ${{ secrets.PASSWORD }}
-        syncroot: ./wp-template/
-        options: --dry-run --verbose --insecure --auto-init
+      run: |
+        cat .github/workflow/rclone.config | sed 's/[$]{host}/${{ secrets.WEB_HOST }}/' | sed 's/[$]{username}/${{ secrets.USERNAME }}/' > ~/.config/rclone/rclone.conf
+        rclone config password remote pass "${{ secrets.PASSWORD }}"
+        rclone rclone sync -i ./wp-template remote:MaeandtheKingdomsofSeasons/wp-content/themes/mae-and-the-kingdoms-of-seasons-test
       
   deploy:
     needs: [build]
