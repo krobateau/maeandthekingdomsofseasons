@@ -25,7 +25,7 @@ jobs:
     - name: Install rclone
       run: sudo apt-get install rclone
     - name: Set the template name
-      run: sed -i 's/[$]{theme_name}/Mae and the Kingdoms of Seasons Test/' style.css
+      run: sed -i 's/[$]{theme_name}/Mae and the Kingdoms of Seasons Test/' wp-template/style.css
     - name: Sync files
       run: |
         mkdir -p ~/.config/rclone
