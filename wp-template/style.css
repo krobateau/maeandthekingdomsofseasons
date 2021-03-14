@@ -919,6 +919,7 @@ input[type="submit"]:hover {
     background: #3b1000;
     margin-bottom: 80px;
     margin-top: 2px;
+    color: #3b1000;
 }
 
 .post-title {
