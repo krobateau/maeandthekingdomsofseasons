@@ -538,7 +538,7 @@ input[type="submit"]:hover {
 
 .big-wrapper {
 	overflow: hidden;
-	background-color: #fff93d;
+	background-color: #fff9ed;
 	color: #3b1000;
 }
 
@@ -2847,3 +2847,38 @@ p.form-allowed-tags {
 	}
 
 }
+
+/*----------------------------------------
+ * Custom
+ -----------------------------------------*/
+ .m0 table {
+  margin-top:0; 
+  margin-bottom:0;
+  :nth-child(odd) {background-color: #bae8ff;}
+}
+.m0 tbody {
+  border-width:0;
+}
+.m0 td {
+  border-width:0;
+}
+.m0 tr:nth-child(odd) {
+  background-color: #37662a;
+}
+
+.m0 tr:nth-child(odd) td {
+  text-align: center;
+        color: white;
+}
+
+.m0 {
+  border-left: 1px solid #0b280c;
+  border-right: 1px solid #0b280c;
+  border-bottom: 1px solid #0b280c;
+}
+
+hr.m0 {
+  height: 1px;
+  width: 100px;
+}
+
