@@ -194,12 +194,9 @@ h1, h2, h3, h4, h5, h6, .faux-heading {
 	margin: 50px 0 25px;
 }
 
-h2 {
-	font-size: 16pt;
-}
 
 h1 { font-size: 2em; }
-h2 { font-size: 1.75em; }
+h2 { font-size: 16pt; }
 h3 { font-size: 1.5em; }
 h4 { font-size: 1.25em; }
 h5 { font-size: 1.1em; }
