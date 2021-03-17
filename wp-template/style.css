@@ -186,7 +186,7 @@ main {
 }
 
 h1, h2, h3, h4, h5, h6, .faux-heading {
-	color: #3b1000;
+	color: #70401e;
 	font-feature-settings: "lnum";
 	font-variant-numeric: lining-nums;
 	font-weight: 700;
@@ -196,7 +196,7 @@ h1, h2, h3, h4, h5, h6, .faux-heading {
 
 
 h1 { font-size: 2em; }
-h2 { font-size: 20pt; }
+h2 { font-size: 20pt; border-bottom: 1px solid #cfac86; }
 h3 { font-size: 1.5em; }
 h4 { font-size: 1.25em; }
 h5 { font-size: 1.1em; }
@@ -540,7 +540,7 @@ input[type="submit"]:hover {
 .big-wrapper {
 	overflow: hidden;
 	background-color: #fff9ed;
-	color: #3b1000;
+	color: #70401e;
 }
 
 .wrapper {
@@ -919,8 +919,8 @@ input[type="submit"]:hover {
     height: 2px;
     background: #3b1000;
     margin-bottom: 80px;
-    margin-top: 2px;
-    color: #3b1000;
+    margin-top: 1px;
+    color: #cfac86;
 }
 
 .post-title {
@@ -930,7 +930,7 @@ input[type="submit"]:hover {
 	margin: 0 0 15px 0;
 		-ms-word-break: break-all;
 	word-break: break-word;
-	color: #3b1000;
+	color: #70401e;
 }
 
 .post-title,
