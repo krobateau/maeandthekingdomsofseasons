@@ -23,10 +23,10 @@ jobs:
       uses: actions/checkout@v2
     - name: Install rclone
       run: sudo apt-get install rclone
-    - name: Set the template name
+    - name: Set the template name in TEST
       if: github.ref != 'refs/heads/main'
       run: sed -i 's/[$]{theme_name}/(Test) Mae and the Kingdoms of Seasons/' wp-template/style.css
-    - name: Sync files
+    - name: Sync files in TEST
       if: github.ref != 'refs/heads/main'
       run: |
         mkdir -p ~/.config/rclone
@@ -34,10 +34,10 @@ jobs:
         cat ~/.config/rclone/rclone.conf
         rclone config password remote pass "${{ secrets.PASSWORD }}"
         rclone sync ./wp-template remote:MaeandtheKingdomsofSeasons/wp-content/themes/mae-and-the-kingdoms-of-seasons-test
-    - name: Set the template name
+    - name: Set the template name in PRODUCTION
       if: github.ref == 'refs/heads/main'
       run: sed -i 's/[$]{theme_name}/Mae and the Kingdoms of Seasons/' wp-template/style.css
-    - name: Sync files
+    - name: Sync files in PRODUCTION
       if: github.ref == 'refs/heads/main'
       run: |
         mkdir -p ~/.config/rclone
