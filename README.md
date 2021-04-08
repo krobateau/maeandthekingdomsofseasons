@@ -1,6 +1,13 @@
 # maeandthekingdomsofseasons
 
-- [TOC]
+- [Using Trello and GitHub](#using-trello-and-github)
+- [The Wordpress Template](#the-wordpress-template)
+
+## Using Trello and GitHub
+
+Instructions on how to use the Trello Board and Github is located in the following link.
+https://docs.google.com/document/d/1UZavnQ-z6Qw4WkqB0qukqhNQmmGnzpx4_9vhh34aXrM/edit#
+
 
 ## The Wordpress Template
 
