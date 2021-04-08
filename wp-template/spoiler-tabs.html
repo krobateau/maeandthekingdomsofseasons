@@ -1,0 +1,64 @@
+<style>
+.spoiler {
+  background-color: #fff9ed;
+  color: #70401e;
+  cursor: pointer;
+  padding: 1px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 14px;
+}
+
+.active, .spoiler:hover {
+  text-decoration: underline;
+}
+
+
+/* Style the collapsible content. Note: hidden by default */
+.spoiler-content {
+  padding: 0px;
+  display: none;
+  overflow: hidden;
+  background-color: #fff9ed;
+}
+
+div.spoiler i.arrow {
+  border: solid #70401e;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+
+div.active i.arrow {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+</style>
+
+<div class="spoiler">Spoiler <i class="arrow"></i></div>
+<div class="spoiler-content">
+  <p>Spoilers and such go here</p>
+</div>
+
+<script>
+var coll = document.getElementsByClassName("spoiler");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    this.firstChild.class = "arrow down";
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
