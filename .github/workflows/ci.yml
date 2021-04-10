@@ -2,48 +2,47 @@ name: CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Run a one-line script
-      run: echo Hello, world!
+      - uses: actions/checkout@v2
+      - name: Run a one-line script
+        run: echo Hello, world!
 
   deploy:
     needs: [build]
     runs-on: ubuntu-latest
     steps:
-    - name: Get latest code
-      uses: actions/checkout@v2
-    - name: Install rclone
-      run: sudo apt-get install rclone
-    - name: Set the template name in TEST
-      if: github.ref != 'refs/heads/main'
-      run: sed -i 's/[$]{theme_name}/(Test) Mae and the Kingdoms of Seasons/' wp-template/style.css
-    - name: Sync files in TEST
-      if: github.ref != 'refs/heads/main'
-      run: |
-        mkdir -p ~/.config/rclone
-        cat rclone.config | sed 's/[$]{host}/${{ secrets.WEB_HOST }}/' | sed 's/[$]{username}/${{ secrets.USERNAME }}/' > ~/.config/rclone/rclone.conf
-        cat ~/.config/rclone/rclone.conf
-        rclone config password remote pass "${{ secrets.PASSWORD }}"
-        rclone sync ./wp-template remote:MaeandtheKingdomsofSeasons/wp-content/themes/mae-and-the-kingdoms-of-seasons-test
-    - name: Set the template name in PRODUCTION
-      if: github.ref == 'refs/heads/main'
-      run: sed -i 's/[$]{theme_name}/Mae and the Kingdoms of Seasons/' wp-template/style.css
-    - name: Sync files in PRODUCTION
-      if: github.ref == 'refs/heads/main'
-      run: |
-        mkdir -p ~/.config/rclone
-        cat rclone.config | sed 's/[$]{host}/${{ secrets.WEB_HOST }}/' | sed 's/[$]{username}/${{ secrets.USERNAME }}/' > ~/.config/rclone/rclone.conf
-        cat ~/.config/rclone/rclone.conf
-        rclone config password remote pass "${{ secrets.PASSWORD }}"
-        rclone sync ./wp-template remote:MaeandtheKingdomsofSeasons/wp-content/themes/mae-and-the-kingdoms-of-seasons
-
- 
+      - name: Get latest code
+        uses: actions/checkout@v2
+      - name: Install rclone
+        run: sudo apt-get install rclone
+      - name: Set the template name in TEST
+        if: github.ref != 'refs/heads/main'
+        run: sed -i 's/[$]{theme_name}/(Test) Mae and the Kingdoms of Seasons/' wp-template/style.css
+      - name: Sync files in TEST
+        if: github.ref != 'refs/heads/main'
+        run: |
+          mkdir -p ~/.config/rclone
+          cat rclone.config | sed 's/[$]{host}/${{ secrets.WEB_HOST }}/' | sed 's/[$]{username}/${{ secrets.USERNAME }}/' > ~/.config/rclone/rclone.conf
+          cat ~/.config/rclone/rclone.conf
+          rclone config password remote pass "${{ secrets.PASSWORD }}"
+          rclone sync ./wp-template remote:MaeandtheKingdomsofSeasons/wp-content/themes/mae-and-the-kingdoms-of-seasons-test
+          rclone sync ./wp-content/plugins/awesomeplugin remote:MaeandtheKingdomsofSeasons/wp-content/awesomeplugin-test
+      - name: Set the template name in PRODUCTION
+        if: github.ref == 'refs/heads/main'
+        run: sed -i 's/[$]{theme_name}/Mae and the Kingdoms of Seasons/' wp-template/style.css
+      - name: Sync files in PRODUCTION
+        if: github.ref == 'refs/heads/main'
+        run: |
+          mkdir -p ~/.config/rclone
+          cat rclone.config | sed 's/[$]{host}/${{ secrets.WEB_HOST }}/' | sed 's/[$]{username}/${{ secrets.USERNAME }}/' > ~/.config/rclone/rclone.conf
+          cat ~/.config/rclone/rclone.conf
+          rclone config password remote pass "${{ secrets.PASSWORD }}"
+          rclone sync ./wp-template remote:MaeandtheKingdomsofSeasons/wp-content/themes/mae-and-the-kingdoms-of-seasons
