@@ -34,7 +34,7 @@ jobs:
           cat ~/.config/rclone/rclone.conf
           rclone config password remote pass "${{ secrets.PASSWORD }}"
           rclone sync ./wp-template remote:MaeandtheKingdomsofSeasons/wp-content/themes/mae-and-the-kingdoms-of-seasons-test
-          rclone sync ./wp-content/plugins/awesomeplugin remote:MaeandtheKingdomsofSeasons/wp-content/awesomeplugin-test
+          rclone sync ./wp-content/plugins/awesomeplugin remote:MaeandtheKingdomsofSeasons/wp-content/plugins/awesomeplugin-test
       - name: Set the template name in PRODUCTION
         if: github.ref == 'refs/heads/main'
         run: sed -i 's/[$]{theme_name}/Mae and the Kingdoms of Seasons/' wp-template/style.css
