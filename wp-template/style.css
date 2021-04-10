@@ -2888,6 +2888,10 @@ figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure img {
 	border: 1px solid #CFAC86
 }
 
+figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure img:hover {
+  border-color: #70401e
+}
+
 figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure img[src*=transparent] 
 {
 	border:none;
