@@ -2882,3 +2882,29 @@ hr.m0 {
   width: 100px;
 }
 
+/* Thumbnails -------------------------------*/
+figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure img {
+  height: 160px;
+	border: 1px solid #CFAC86
+}
+
+figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure img[src*=transparent] 
+{
+	border:none;
+}
+
+figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure figcaption
+{
+	color: black;
+  background: #fff9ed;
+  padding-top: .7em;
+  padding-bottom: .7em;
+  padding-left: .77em;
+  padding-right: .77em;
+	border-top: 1px solid #CFAC86
+}
+
+figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure img[src*=transparent] + figcaption
+{
+	border: none;
+}
