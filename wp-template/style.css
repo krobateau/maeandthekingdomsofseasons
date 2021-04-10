@@ -2912,3 +2912,8 @@ figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure img[src*=tr
 {
 	border: none;
 }
+
+figcaption.my-thumbnail-hover
+{
+	border-color: #70401e
+}
