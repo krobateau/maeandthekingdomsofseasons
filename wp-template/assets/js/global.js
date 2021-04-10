@@ -82,5 +82,9 @@ jQuery(document).ready(function($) {
         return false;
     });
 	
+	// Gallery hover styling
+	$('figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure img').mouseover(function(){
+    console.log('hello world');
+	});
 
 });
