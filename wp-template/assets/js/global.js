@@ -82,5 +82,17 @@ jQuery(document).ready(function($) {
         return false;
     });
 	
+	// Gallery hover styling
+	$('figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure img').mouseenter(function(){
+    if(!$(this).attr('src').includes('transparent')){
+		  $(this).next().addClass('my-thumbnail-hover');
+		}
+	});
+
+	$('figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure img').mouseleave(function(){
+    if(!$(this).attr('src').includes('transparent')){
+		  $(this).next().removeClass('my-thumbnail-hover');
+		}
+	});
 
 });
