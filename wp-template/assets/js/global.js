@@ -84,13 +84,13 @@ jQuery(document).ready(function($) {
 	
 	// Gallery hover styling
 	$('figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure img').mouseenter(function(){
-    if(!$(this).attr('src').contains('transparent')){
+    if(!$(this).attr('src').includes('transparent')){
 		  $(this).find('figcaption').addClass('my-thumbnail-hover');
 		}
 	});
 
 	$('figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure img').mouseleave(function(){
-    if(!$(this).attr('src').contains('transparent')){
+    if(!$(this).attr('src').includes('transparent')){
 		  $(this).find('figcaption').removeClass('my-thumbnail-hover');
 		}
 	});
