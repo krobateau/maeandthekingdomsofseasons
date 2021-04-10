@@ -2885,6 +2885,7 @@ hr.m0 {
 /* Thumbnails -------------------------------*/
 figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure img {
   height: 160px;
+	border: 1px solid #CFAC86
 }
 
 figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure figcaption
@@ -2895,5 +2896,6 @@ figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure figcaption
   padding-bottom: .7em;
   padding-left: .77em;
   padding-right: .77em;
+	border-top: 1px solid #CFAC86
 }
 
