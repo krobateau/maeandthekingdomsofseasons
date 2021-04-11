@@ -93,7 +93,7 @@ jQuery(document).ready(function($) {
     if(!$(this).attr('src').includes('transparent')){
 		  $(this).next().removeClass('my-thumbnail-hover');
 		}
-		if($(this).addr('src').includes('spoiler')){
+		if($(this).attr('src').includes('spoiler')){
 			$(this).wrap('<div class=image-wrap></div>');
 		}
 	});
