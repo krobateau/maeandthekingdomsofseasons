@@ -2885,11 +2885,19 @@ hr.m0 {
 /* Thumbnails -------------------------------*/
 figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure img {
   height: 160px;
-	border: 1px solid #CFAC86
+	border: 1px solid #CFAC86;
 }
 
 figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure img:hover {
   border-color: #70401e
+}
+
+div.image-wrap {
+	border: 1px solid #CFAC86;
+}
+
+div.image-wrap:hover {
+	border: 1px solid #70401e;
 }
 
 figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure img[src*=transparent] 
