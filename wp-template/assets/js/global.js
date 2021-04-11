@@ -99,7 +99,7 @@ jQuery(document).ready(function($) {
 	$('.my-thumbnail div.image-wrap').mouseenter(function(){
 		$(this).next().addClass('my-thumbnail-hover');
 	});
-	$('.my-thumbnail div.image-wrap').mosueleave(function(){
+	$('.my-thumbnail div.image-wrap').mouseleave(function(){
 		$(this).next().removeClass('my-thumbnail-hover');
 	})
 
