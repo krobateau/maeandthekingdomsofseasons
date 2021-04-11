@@ -96,5 +96,11 @@ jQuery(document).ready(function($) {
 	});
 
 	$('figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure img[src*=spoiler]').wrap('<div class=image-wrap></div>');
+	$('.my-thumbnail div.image-wrap').mouseenter(function(){
+		$(this).next().addClass('my-thumbnail-hover');
+	});
+	$('.my-thumbnail div.image-wrap').mosueleave(function(){
+		$(this).next().removeClass('my-thumbnail-hover');
+	})
 
 });
