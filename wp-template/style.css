@@ -2920,5 +2920,6 @@ figcaption.my-thumbnail-hover
 
 figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure img[src*=spoiler]
 {
-	opacity: 0 !important;
+	opacity: 0.1 !important;
+	border: none;
 }
