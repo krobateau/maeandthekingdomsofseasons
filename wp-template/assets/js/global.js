@@ -93,9 +93,10 @@ jQuery(document).ready(function($) {
     if(!$(this).attr('src').includes('transparent')){
 		  $(this).next().removeClass('my-thumbnail-hover');
 		}
-		if($(this).attr('src').includes('spoiler')){
-			$(this).wrap('<div class=image-wrap></div>');
-		}
 	});
+
+	$('figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure img[src*=spoiler]'){
+		$(this).wrap('<div class=image-wrap></div>');
+	}
 
 });
