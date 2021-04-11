@@ -95,8 +95,6 @@ jQuery(document).ready(function($) {
 		}
 	});
 
-	$('figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure img[src*=spoiler]'){
-		$(this).wrap('<div class=image-wrap></div>');
-	}
+	$('figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure img[src*=spoiler]').wrap('<div class=image-wrap></div>');
 
 });
