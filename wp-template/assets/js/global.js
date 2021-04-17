@@ -98,7 +98,9 @@ jQuery(document).ready(function($) {
 	const spoilerImages = $('figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure img[src*=spoiler]');
 	for(i = 0; i < spoilerImages.length; i++){
 		const figcaption = $(spoilerImages[i].nextElementSibling);
-		figcaption.attr("alt",figcaption.innerHTML);
+		const originalValue = figcaption.innerHTML;
+		console.log(originalValue);
+		figcaption.attr("alt",originalValue);
 		figcaption.html("Spoiler - click to reveal");
 	};
 	spoilerImages.wrap('<div class=image-wrap></div>');
