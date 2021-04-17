@@ -103,6 +103,7 @@ jQuery(document).ready(function($) {
 		figcaption.attr("alt",originalValue);
 		figcaption.html("Spoiler - click to reveal");
 	};
+	spoilerImages.addClass("spoiler-image");
 	spoilerImages.wrap('<div class=image-wrap></div>');
 
 	$('.my-thumbnail div.image-wrap').mouseenter(function(){

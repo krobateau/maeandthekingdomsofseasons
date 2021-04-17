@@ -2926,7 +2926,7 @@ figcaption.my-thumbnail-hover
 	border-top-color: #70401e !important;
 }
 
-figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure img[src*=spoiler]
+figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure img[src*=spoiler].spoiler-image
 {
 	opacity: 0.1 !important;
 	border: none;
