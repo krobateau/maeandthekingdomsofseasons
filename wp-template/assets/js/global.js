@@ -94,12 +94,12 @@ jQuery(document).ready(function($) {
 		  $(this).next().removeClass('my-thumbnail-hover');
 		}
 	});
-
+	
+	// Spoiler section
 	const spoilerImages = $('figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure img[src*=spoiler]');
 	for(i = 0; i < spoilerImages.length; i++){
 		const figcaption = $(spoilerImages[i].nextElementSibling);
 		const originalValue = figcaption.html();
-		console.log(originalValue);
 		figcaption.attr("alt",originalValue);
 		figcaption.html("Spoiler - click to reveal");
 	};
@@ -112,10 +112,10 @@ jQuery(document).ready(function($) {
 		$(this).next().removeClass('my-thumbnail-hover');
 	})
   
-  // Spoiler section
   var coll = document.getElementsByClassName("spoiler");
   var i;
   
+	// Spoiler reveal
   for (i = 0; i < coll.length; i++) {
     coll[i].addEventListener("click", function() {
       this.classList.toggle("active");
@@ -128,5 +128,12 @@ jQuery(document).ready(function($) {
       }
     });
   }
+
+	for (i = 0; i < spoilerImages.length; i++){
+		const image = spoilerImages[i];
+		image.addEventListener("click", function() {
+			this.classList.toggle("reveal");
+		});
+	}
 
 });
