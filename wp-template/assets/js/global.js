@@ -96,11 +96,11 @@ jQuery(document).ready(function($) {
 	});
 
 	const spoilerImages = $('figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure img[src*=spoiler]');
-	spoilerImages.forEach(i => {
-		const figcaption = i.nextElementSibling;
+	for(i = 0; i < spoilerImages.length; i++){
+		const figcaption = spoilerImages[i].nextElementSibling;
 		figcaption.attr("alt",figcaption.html());
 		figcaption.html("Spoiler - click to reveal");
-	});
+	};
 	spoilerImages.wrap('<div class=image-wrap></div>');
 
 	$('.my-thumbnail div.image-wrap').mouseenter(function(){
