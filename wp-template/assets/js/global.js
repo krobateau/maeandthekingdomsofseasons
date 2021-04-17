@@ -136,7 +136,7 @@ jQuery(document).ready(function($) {
 			if($(this).hasClass('spoiler-image')){
 				$(this).removeClass('spoiler-image');
 				$(this).addClass('reveal-image');
-				const figcaption = $(this.parent.nextElementSibling);
+				const figcaption = $($(this).parent().nextElementSibling);
 				const caption = figcaption.attr('alt');
 				figcaption.html(caption);
 			}else{
