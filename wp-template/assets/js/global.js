@@ -133,7 +133,13 @@ jQuery(document).ready(function($) {
 	for (i = 0; i < spoilerImages.length; i++){
 		const image = spoilerImages[i];
 		image.addEventListener("click", function() {
-			this.classList.toggle("reveal");
+			if($(this).hasClass('spoiler-image')){
+				$(this).removeClass('spoiler-image');
+				$(this).addClass('reveal-image');
+			}else{
+        $(this).removeClass('reveal-image');
+				$(this).addClass('spoiler-image');
+			}
 		});
 	}
 
