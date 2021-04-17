@@ -97,7 +97,7 @@ jQuery(document).ready(function($) {
 
 	const spoilerImages = $('figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure img[src*=spoiler]');
 	for(i = 0; i < spoilerImages.length; i++){
-		const figcaption = spoilerImages[i].nextElementSibling;
+		const figcaption = $(spoilerImages[i].nextElementSibling);
 		figcaption.attr("alt",figcaption.html());
 		figcaption.html("Spoiler - click to reveal");
 	};
