@@ -2886,6 +2886,7 @@ hr.m0 {
 figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure img {
   height: 160px;
 	border: 1px solid #CFAC86;
+	cursor: pointer;
 }
 
 figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure img:hover {
