@@ -139,9 +139,6 @@ jQuery(document).ready(function($) {
 				const figcaption = $(this).parent().next();
 				const caption = figcaption.attr('alt');
 				figcaption.html(caption);
-			}else{
-        $(this).removeClass('reveal-image');
-				$(this).addClass('spoiler-image');
 			}
 		});
 	}
