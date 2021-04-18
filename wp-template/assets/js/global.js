@@ -83,13 +83,15 @@ jQuery(document).ready(function($) {
     });
 	
 	// Gallery hover styling
-	$('figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure img').mouseenter(function(){
+	const galleryImages = $('figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure img')
+	
+	galleryImages.mouseenter(function(){
     if(!$(this).attr('src').includes('transparent')){
 		  $(this).next().addClass('my-thumbnail-hover');
 		}
 	});
 
-	$('figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure img').mouseleave(function(){
+	galleryImages.mouseleave(function(){
     if(!$(this).attr('src').includes('transparent')){
 		  $(this).next().removeClass('my-thumbnail-hover');
 		}
@@ -143,4 +145,25 @@ jQuery(document).ready(function($) {
 		});
 	}
 
+	// Model image
+	$(this).append('<div id="myModal" class="modal"><span id="modalClose">&times;</span><img class="modal-content" id="img01"><div id="caption"></div></div>');
+
+	galleryImages.on('click', function() {
+		var modal = document.getElementById("myModal");
+
+	  // Get the image and insert it inside the modal - use its "alt" text as a caption
+	  var img = document.getElementById("myImg");
+	  var modalImg = $(this);
+	    
+		modal.style.display = "block";
+		modalImg.src = modalImg.attr('src');
+
+	  // Get the <span> element that closes the modal
+	  var span = document.getElementById("modalClose");
+
+	  // When the user clicks on <span> (x), close the modal
+	  span.onclick = function() { 
+		  modal.style.display = "none";
+	  }
+	});
 });
