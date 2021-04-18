@@ -3001,9 +3001,10 @@ div.active i.arrow {
 .modal-content {
   margin: auto;
   display: block;
-  width: 80%;
+  width: auto;
+	height: auto;
   max-width: 700px;
-	max-height:80%;
+	max-height:90%;
 }
 
 /* Caption of Modal Image */
