@@ -2900,10 +2900,6 @@ div.image-wrap:hover {
 	border: 1px solid #70401e;
 }
 
-div.image-wrap img {
-	border: none;
-}
-
 figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure img[src*=transparent] 
 {
 	border:none;
@@ -2933,7 +2929,7 @@ figcaption.my-thumbnail-hover
 figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure img[src*=spoiler].spoiler-image
 {
 	opacity: 0.1 !important;
-	border: none;
+	border: none !important;
 }
 
 /*------------------  Spoilers ----------------------------------*/
