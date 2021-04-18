@@ -94,8 +94,18 @@ jQuery(document).ready(function($) {
 		  $(this).next().removeClass('my-thumbnail-hover');
 		}
 	});
+	
+	// Spoiler section
+	const spoilerImages = $('figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure img[src*=spoiler]');
+	for(i = 0; i < spoilerImages.length; i++){
+		const figcaption = $(spoilerImages[i].nextElementSibling);
+		const originalValue = figcaption.html();
+		figcaption.attr("alt",originalValue);
+		figcaption.html("Spoiler - click to reveal");
+	};
+	spoilerImages.addClass("spoiler-image");
+	spoilerImages.wrap('<div class=image-wrap></div>');
 
-	$('figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure img[src*=spoiler]').wrap('<div class=image-wrap></div>');
 	$('.my-thumbnail div.image-wrap').mouseenter(function(){
 		$(this).next().addClass('my-thumbnail-hover');
 	});
@@ -103,10 +113,10 @@ jQuery(document).ready(function($) {
 		$(this).next().removeClass('my-thumbnail-hover');
 	})
   
-  // Spoiler section
   var coll = document.getElementsByClassName("spoiler");
   var i;
   
+	// Spoiler reveal
   for (i = 0; i < coll.length; i++) {
     coll[i].addEventListener("click", function() {
       this.classList.toggle("active");
@@ -119,5 +129,18 @@ jQuery(document).ready(function($) {
       }
     });
   }
+
+	for (i = 0; i < spoilerImages.length; i++){
+		const image = spoilerImages[i];
+		image.addEventListener("click", function() {
+			if($(this).hasClass('spoiler-image')){
+				$(this).removeClass('spoiler-image');
+				$(this).addClass('reveal-image');
+				const figcaption = $(this).parent().next();
+				const caption = figcaption.attr('alt');
+				figcaption.html(caption);
+			}
+		});
+	}
 
 });
