@@ -146,7 +146,7 @@ jQuery(document).ready(function($) {
 	}
 
 	// Model image
-	$(this).append('<div id="myModal" class="modal"><span id="modalClose">&times;</span><img class="modal-content" id="img01"><div id="caption"></div></div>');
+	$(document.body).append('<div id="myModal" class="modal"><span id="modalClose">&times;</span><img class="modal-content" id="img01"><div id="caption"></div></div>');
 
 	galleryImages.on('click', function() {
 		var modal = document.getElementById("myModal");
