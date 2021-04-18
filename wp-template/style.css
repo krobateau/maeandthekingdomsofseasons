@@ -3003,6 +3003,7 @@ div.active i.arrow {
   display: block;
   width: 80%;
   max-width: 700px;
+	max-height:80%;
 }
 
 /* Caption of Modal Image */
