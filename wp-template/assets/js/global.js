@@ -146,6 +146,9 @@ jQuery(document).ready(function($) {
 	}
 
 	galleryImages.on('click', function() {
+		if($(this).hasClass('spoiler-image')){
+			return;
+		}
 		var modal = document.getElementById("myModal");
 
 	  // Get the image and insert it inside the modal - use its "alt" text as a caption
