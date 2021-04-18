@@ -131,23 +131,7 @@ jQuery(document).ready(function($) {
       }
     });
   }
-
-	for (i = 0; i < spoilerImages.length; i++){
-		const image = spoilerImages[i];
-		image.addEventListener("click", function() {
-			if($(this).hasClass('spoiler-image')){
-				$(this).removeClass('spoiler-image');
-				$(this).addClass('reveal-image');
-				const figcaption = $(this).parent().next();
-				const caption = figcaption.attr('alt');
-				figcaption.html(caption);
-			}
-		});
-	}
-
-	galleryImages.filter(function(){
-		return !$(this).hasClass('spoiler-image');
-	}).on('click', function() {
+  const showLargeImage = function() {
 		if($(this).hasClass('spoiler-image')){
 			return;
 		}
@@ -159,10 +143,25 @@ jQuery(document).ready(function($) {
 	    
 		modal.style.display = "block";
 		modalImg.src = img.attr('src');
+	};
 
-		
-	  // When the user clicks on <span> (x), close the modal
-	});
+	for (i = 0; i < spoilerImages.length; i++){
+		const image = spoilerImages[i];
+		image.addEventListener("click", function() {
+			if($(this).hasClass('spoiler-image')){
+				$(this).removeClass('spoiler-image');
+				$(this).addClass('reveal-image');
+				const figcaption = $(this).parent().next();
+				const caption = figcaption.attr('alt');
+				figcaption.html(caption);
+				$(this).on('click', showLargeImage);
+			}
+		});
+	}
+
+	galleryImages.filter(function(){
+		return !$(this).hasClass('spoiler-image');
+	}).on('click', showLargeImage);
 	// Get the <span> element that closes the modal
 	var span = document.getElementById("modalClose");
 	span.onclick = function() { 
