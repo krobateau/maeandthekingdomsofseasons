@@ -156,7 +156,7 @@ jQuery(document).ready(function($) {
 	  var modalImg = document.getElementById("img01");;
 	    
 		modal.style.display = "block";
-		modalImg.src = modalImg.attr('src');
+		modalImg.src = img.attr('src');
 
 	  // Get the <span> element that closes the modal
 	  var span = document.getElementById("modalClose");
