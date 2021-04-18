@@ -68,5 +68,10 @@
 
 <?php wp_footer(); ?>
 
+<div id="myModal" class="modal">
+	<span id="modalClose">&times;</span>
+	<img class="modal-content" id="modalImage">
+	<div id="caption"></div>
+</div>
 </body>
 </html>
