@@ -83,13 +83,15 @@ jQuery(document).ready(function($) {
     });
 	
 	// Gallery hover styling
-	$('figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure img').mouseenter(function(){
+	const galleryImages = $('figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure img')
+	
+	galleryImages.mouseenter(function(){
     if(!$(this).attr('src').includes('transparent')){
 		  $(this).next().addClass('my-thumbnail-hover');
 		}
 	});
 
-	$('figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure img').mouseleave(function(){
+	galleryImages.mouseleave(function(){
     if(!$(this).attr('src').includes('transparent')){
 		  $(this).next().removeClass('my-thumbnail-hover');
 		}
@@ -129,6 +131,19 @@ jQuery(document).ready(function($) {
       }
     });
   }
+  const showLargeImage = function() {
+		if($(this).hasClass('spoiler-image')){
+			return;
+		}
+		var modal = document.getElementById("myModal");
+
+	  // Get the image and insert it inside the modal - use its "alt" text as a caption
+	  var img = $(this)
+	  var modalImg = document.getElementById("modalImage");;
+	    
+		modal.style.display = "block";
+		modalImg.src = img.attr('src');
+	};
 
 	for (i = 0; i < spoilerImages.length; i++){
 		const image = spoilerImages[i];
@@ -139,8 +154,17 @@ jQuery(document).ready(function($) {
 				const figcaption = $(this).parent().next();
 				const caption = figcaption.attr('alt');
 				figcaption.html(caption);
+				$(this).on('click', showLargeImage);
 			}
 		});
 	}
 
+	galleryImages.filter(function(){
+		return !$(this).hasClass('spoiler-image') && !$(this).attr('src').includes('transparent');
+	}).on('click', showLargeImage);
+	// Get the <span> element that closes the modal
+	var span = document.getElementById("modalClose");
+	span.onclick = function() { 
+		document.getElementById("myModal").style.display = "none";
+	}
 });
