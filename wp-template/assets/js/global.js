@@ -160,7 +160,7 @@ jQuery(document).ready(function($) {
 	}
 
 	galleryImages.filter(function(){
-		return !$(this).hasClass('spoiler-image');
+		return !$(this).hasClass('spoiler-image') && $(this).attr('src').includes('transparent');
 	}).on('click', showLargeImage);
 	// Get the <span> element that closes the modal
 	var span = document.getElementById("modalClose");

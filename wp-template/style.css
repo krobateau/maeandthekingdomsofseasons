@@ -2903,7 +2903,8 @@ div.image-wrap:hover {
 
 figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure img[src*=transparent] 
 {
-	border:none;
+	border: none;
+	cursor: default;
 }
 
 figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure figcaption
