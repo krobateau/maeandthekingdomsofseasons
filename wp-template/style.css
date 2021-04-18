@@ -2929,6 +2929,11 @@ figcaption.my-thumbnail-hover
 figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure img[src*=spoiler].spoiler-image
 {
 	opacity: 0.1 !important;
+	border: none;
+}
+
+img.reveal-image img
+{
 	border: none !important;
 }
 
