@@ -145,7 +145,9 @@ jQuery(document).ready(function($) {
 		});
 	}
 
-	galleryImages.on('click', function() {
+	galleryImages.filter(function(){
+		return !$(this).hasClass('spoiler-image');
+	}).on('click', function() {
 		if($(this).hasClass('spoiler-image')){
 			return;
 		}
