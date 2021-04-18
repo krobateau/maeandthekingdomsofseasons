@@ -2932,6 +2932,11 @@ figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure img[src*=sp
 	border: none;
 }
 
+img.reveal-image
+{
+	border: none !important;
+}
+
 /*------------------  Spoilers ----------------------------------*/
 .spoiler {
   background-color: #fff9ed;
