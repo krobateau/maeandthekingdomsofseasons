@@ -1,4 +1,4 @@
-	<div class="footer section large-padding bg-dark">
+	<div class="footer section large-padding bg-mae">
 		
 		<div class="footer-inner section-inner group">
 		
@@ -48,7 +48,7 @@
 	
 	</div><!-- .footer -->
 	
-	<div class="credits section bg-dark no-padding">
+	<div class="credits section bg-mae no-padding">
 	
 		<div class="credits-inner section-inner group">
 	
