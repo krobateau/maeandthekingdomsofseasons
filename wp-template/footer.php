@@ -50,23 +50,23 @@
 		
 		</div><!-- .footer -->
 		
-		<div class="credits section bg-mae no-padding">
-		
-			<div class="credits-inner section-inner group">
-		
-				<p class="credits-left">
-					&copy; <?php echo date( 'Y' ); ?> <a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a>
-				</p>
-				
-				<p class="credits-right">
-					<span><?php printf( __( 'Theme by <a href="%s">Anders Noren</a>', 'hemingway' ), 'https://www.andersnoren.se' ); ?></span> &mdash; <a title="<?php _e( 'To the top', 'hemingway' ); ?>" class="tothetop"><?php _e( 'Up', 'hemingway' ); ?> &uarr;</a>
-				</p>
-						
-			</div><!-- .credits-inner -->
-			
-		</div><!-- .credits -->
   
 	</div><!-- .mae-footer -->
+	<div class="credits section bg-mae no-padding">
+	
+		<div class="credits-inner section-inner group">
+	
+			<p class="credits-left">
+				&copy; <?php echo date( 'Y' ); ?> <a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a>
+			</p>
+			
+			<p class="credits-right">
+				<span><?php printf( __( 'Theme by <a href="%s">Anders Noren</a>', 'hemingway' ), 'https://www.andersnoren.se' ); ?></span> &mdash; <a title="<?php _e( 'To the top', 'hemingway' ); ?>" class="tothetop"><?php _e( 'Up', 'hemingway' ); ?> &uarr;</a>
+			</p>
+					
+		</div><!-- .credits-inner -->
+		
+	</div><!-- .credits -->
 
 </div><!-- .big-wrapper -->
 
