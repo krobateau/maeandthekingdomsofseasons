@@ -2282,7 +2282,6 @@ p.form-allowed-tags {
 }
 
 .credits-inner {
-	border-top: 2px solid rgba(255,255,255,0.1);
 	letter-spacing: 1px;
 	padding: 25px 0 4%;
 	text-transform: uppercase;
@@ -2302,6 +2301,10 @@ p.form-allowed-tags {
 
 .tothetop:hover {
 	cursor: pointer;
+}
+
+div.credits {
+	background-color: #cfac86;
 }
 
 
@@ -2687,7 +2690,7 @@ p.form-allowed-tags {
 	/* Credits ------------------------------- */
 
 	.credits.section {
-		border-top: 1px solid rgba( 255, 255, 255, .1 );
+		
 	}
 
 	.credits-inner {
@@ -3062,4 +3065,12 @@ div.active i.arrow {
   .modal-content {
     width: 100%;
   }
+}
+
+.mae-footer {
+	background-image: url("https://maeandthekingdomsofseasons.com/wp-content/uploads/2021/04/Website-Background-2.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 358px;
 }

@@ -1,54 +1,58 @@
-	<div class="footer section large-padding bg-dark">
-		
-		<div class="footer-inner section-inner group">
-		
-			<?php if ( is_active_sidebar( 'footer-a' ) ) : ?>
+	<div class="mae-footer">
+
+		<div class="footer section large-padding bg-mae">
 			
-				<div class="column column-1 left">
+			<div class="footer-inner section-inner group">
+			
+				<?php if ( is_active_sidebar( 'footer-a' ) ) : ?>
 				
-					<div class="widgets">
-			
-						<?php dynamic_sidebar( 'footer-a' ); ?>
-											
+					<div class="column column-1 left">
+					
+						<div class="widgets">
+				
+							<?php dynamic_sidebar( 'footer-a' ); ?>
+												
+						</div>
+						
 					</div>
 					
-				</div>
-				
-			<?php endif; ?><!-- .footer-a -->
-				
-			<?php if ( is_active_sidebar( 'footer-b' ) ) : ?>
-			
-				<div class="column column-2 left">
-				
-					<div class="widgets">
-			
-						<?php dynamic_sidebar( 'footer-b' ); ?>
-											
-					</div><!-- .widgets -->
+				<?php endif; ?><!-- .footer-a -->
 					
-				</div>
+				<?php if ( is_active_sidebar( 'footer-b' ) ) : ?>
 				
-			<?php endif; ?><!-- .footer-b -->
-								
-			<?php if ( is_active_sidebar( 'footer-c' ) ) : ?>
-			
-				<div class="column column-3 left">
-			
-					<div class="widgets">
-			
-						<?php dynamic_sidebar( 'footer-c' ); ?>
-											
-					</div><!-- .widgets -->
+					<div class="column column-2 left">
 					
-				</div>
+						<div class="widgets">
 				
-			<?php endif; ?><!-- .footer-c -->
+							<?php dynamic_sidebar( 'footer-b' ); ?>
+												
+						</div><!-- .widgets -->
+						
+					</div>
 					
-		</div><!-- .footer-inner -->
-	
-	</div><!-- .footer -->
-	
-	<div class="credits section bg-dark no-padding">
+				<?php endif; ?><!-- .footer-b -->
+									
+				<?php if ( is_active_sidebar( 'footer-c' ) ) : ?>
+				
+					<div class="column column-3 left">
+				
+						<div class="widgets">
+				
+							<?php dynamic_sidebar( 'footer-c' ); ?>
+												
+						</div><!-- .widgets -->
+						
+					</div>
+					
+				<?php endif; ?><!-- .footer-c -->
+						
+			</div><!-- .footer-inner -->
+		
+		</div><!-- .footer -->
+		
+  
+	</div><!-- .mae-footer -->
+	<div class="credits section bg-mae no-padding">
 	
 		<div class="credits-inner section-inner group">
 	
