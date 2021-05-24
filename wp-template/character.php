@@ -5,12 +5,14 @@ body {font-family: Arial;}
 /* Style the tab */
 .tab {
   overflow: hidden;
-  border: 1px solid #0b280c;
+  border: 2px solid #0b280c;
   background-color: #37662a;
+  border-radius: 10px 10px 0px 0px
 }
 
 /* Style the buttons inside the tab */
 .tab button {
+  margin: 5px;
   background-color: inherit;
   float: left;
   border: none;
@@ -20,7 +22,8 @@ body {font-family: Arial;}
   transition: 0.3s;
   font-size: 16px;
   color: white;
-  border-radius: 0px;
+  border-radius: 10px;
+  text-decoration: none;
 }
 
 /* Change background color of buttons on hover */
@@ -37,32 +40,32 @@ body {font-family: Arial;}
 .tabcontent {
   display: none;
   padding: 6px 12px;
-  border: 1px solid #0b280c;
+  border: 2px solid #0b280c;
   border-top: none;
 }
 </style>
 
 
 <div style="">
-<div class="tab" style="color: black">
-  <button class="tablinks active" onclick="openCity(event, 'Mae')">Mae</button>
-  <button class="tablinks" onclick="openCity(event, 'Back')">Back</button>
-  <button class="tablinks" onclick="openCity(event, 'Front')">Front</button>
-</div>
+  <div class="tab" style="color: black">
+    <button class="tablinks active" onclick="openCity(event, 'Mae')">Mae</button>
+    <button class="tablinks" onclick="openCity(event, 'Back')">Back</button>
+    <button class="tablinks" onclick="openCity(event, 'Front')">Front</button>
+  </div>
 
-<div id="Mae" class="tabcontent">
-  <img width="100%" src="https://maeandthekingdomsofseasons.com/wp-content/uploads/2021/02/Alex.png">
-</div>
+  <div id="Mae" class="tabcontent">
+    <img width="100%" src="https://maeandthekingdomsofseasons.com/wp-content/uploads/2021/02/Alex.png">
+  </div>
 
-<div id="Back" class="tabcontent">
-  <h3>Back</h3>
-  <p>This is the back.</p> 
-</div>
+  <div id="Back" class="tabcontent">
+    <h3>Back</h3>
+    <p>This is the back.</p> 
+  </div>
 
-<div id="Front" class="tabcontent">
-  <h3>Front</h3>
-  <p>This is the front.</p>
-</div>
+  <div id="Front" class="tabcontent">
+    <h3>Front</h3>
+    <p>This is the front.</p>
+  </div>
 
 </div>
 <script>
