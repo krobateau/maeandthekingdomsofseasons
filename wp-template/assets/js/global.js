@@ -175,14 +175,14 @@ jQuery(document).ready(function($) {
 		console.log(characterName);
 		const item = {
 			placeholder: characterTables[i],
+			populate: function(html) {
+				this.placeholder.innerHTML = html;
+			},
 		  fetch: function(characterName){
 				fetch('/charactertable?characterName='+characterName).then(function (response) {
 			    // The API call was successful!
 			    return response.text();
-		    }).then(function (html) {
-					console.log(html);
-					this.placeholder.innerHTML = html;
-				}).catch(function (err) {
+		    }).then(item.populate).catch(function (err) {
 			    // There was an error
 	  	    console.warn('Something went wrong.', err);
 		    });
