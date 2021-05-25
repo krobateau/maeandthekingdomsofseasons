@@ -176,7 +176,7 @@ jQuery(document).ready(function($) {
 		const item = {
 			placeholder: characterTables[i],
 			populate: function(html) {
-				this.placeholder.innerHTML = html;
+				item.placeholder.innerHTML = html;
 			},
 		  fetch: function(characterName){
 				fetch('/charactertable?characterName='+characterName).then(function (response) {
