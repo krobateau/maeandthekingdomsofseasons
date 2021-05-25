@@ -177,7 +177,7 @@ jQuery(document).ready(function($) {
 			// The API call was successful!
 			return response.text();
 		}).then(function (html) {
-		  characterTables[i].innerHTML = html;
+		  console.log(html);
 		}).catch(function (err) {
 			// There was an error
 			console.warn('Something went wrong.', err);
