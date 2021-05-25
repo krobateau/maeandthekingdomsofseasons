@@ -173,14 +173,11 @@ jQuery(document).ready(function($) {
 	for (i = 0; i < characterTables.length; i++) {
 		const characterName = characterTables[i].getAttribute("name");
 		console.log(characterName);
-		fetch('/charactertable?characterName='+characterName).then(function (response) {
+		const html = await fetch('/charactertable?characterName='+characterName).then(function (response) {
 			// The API call was successful!
 			return response.text();
-		}).then(function (html) {
-		  console.log(html);
-		}).catch(function (err) {
-			// There was an error
-			console.warn('Something went wrong.', err);
 		});
+		console.log(html);
+		characterTables[i].innerHTML = html;
 	}
 });
