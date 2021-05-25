@@ -173,11 +173,21 @@ jQuery(document).ready(function($) {
 	for (i = 0; i < characterTables.length; i++) {
 		const characterName = characterTables[i].getAttribute("name");
 		console.log(characterName);
-		const html = await fetch('/charactertable?characterName='+characterName).then(function (response) {
-			// The API call was successful!
-			return response.text();
-		});
-		console.log(html);
-		characterTables[i].innerHTML = html;
+		const item = {
+			placeholder: characterTables[i],
+		  fetch: function(characterName){
+				fetch('/charactertable?characterName='+characterName).then(function (response) {
+			    // The API call was successful!
+			    return response.text();
+		    }).then(function (html) {
+					console.log(html);
+					this.placeholder.innerHTML = html;
+				}).catch(function (err) {
+			    // There was an error
+	  	    console.warn('Something went wrong.', err);
+		    });
+	    }
+	  };
+		item.fetch(characterName);
 	}
 });
