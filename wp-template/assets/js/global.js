@@ -167,4 +167,11 @@ jQuery(document).ready(function($) {
 	span.onclick = function() { 
 		document.getElementById("myModal").style.display = "none";
 	}
+
+	// Character Table rendering Code
+	const characterTables = document.getElementsByClassName("character-table");
+	for (i = 0; i < characterTables.length; i++) {
+		const characterName = characterTables[i].getAttribute("name");
+		console.log(characterName);
+	}
 });
