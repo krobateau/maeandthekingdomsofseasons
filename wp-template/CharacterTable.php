@@ -3,7 +3,7 @@
 Template Name: Character Table
 */
 $characterName = $_GET["characterName"];
-$characterData = file_get_contents('https://script.google.com/macros/s/AKfycbwk4hdhsehHOSd_zUdZ2hXvNsTU0TNNQbKM3eX7vwGYhDixptc0/exec?name=' . $characterName);
+$characterData = json_decode(file_get_contents('https://script.google.com/macros/s/AKfycbwk4hdhsehHOSd_zUdZ2hXvNsTU0TNNQbKM3eX7vwGYhDixptc0/exec?name=' . $characterName));
 ?>
 <style>
 /* Style the tab */
@@ -94,11 +94,11 @@ $characterData = file_get_contents('https://script.google.com/macros/s/AKfycbwk4
       </tr>
       <tr>
         <td class="has-text-align-left" data-align="left">
-          <strong>Full Name: <span><? echo $characterData->name ?></span>
+          <strong>Full Name: <span style="color:black;"><?php echo $characterData->name ?></span>
             <br>Nicknames:
-            <br>Age:
-            <br>Gender:
-            <br>Sexuality:
+            <br>Age: <span style="color:black;"><?php echo $characterData->age ?></span>
+            <br>Gender: <span style="color:black;"><?php echo $characterData->gender ?></span>
+            <br>Sexuality: <span style="color:black;"><?php echo $characterData->sexuality ?></span>
           </strong>
         </td>
       </tr>
