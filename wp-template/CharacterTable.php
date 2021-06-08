@@ -67,25 +67,21 @@ function getVisibleStyle($value) {
 
 <div style="">
   <div class="tab" style="color: black">
-    <button class="tablinks active" onclick="openPose(event, 'Mae')">Mae</button>
-    <button class="tablinks" onclick="openPose(event, 'Back')">Back</button>
-    <button class="tablinks" onclick="openPose(event, 'Front')">Front</button>
+  <?php
+    $images = json_decode($characterData->images);
+    foreach ($images as $image) { ?>
+    <button class="tablinks <?php if ($image->title == $images[0]->title) { echo "active" }?>" onclick="openPose(event, '<?php echo $image->title ?>')"><?php echo $image->title ?></button>
+    <?php } ?>
   </div>
 
   <div class="tabcontent-container">
-    <div id="Mae" class="tabcontent" style="display: block;">
-      <img width="100%" src="https://maeandthekingdomsofseasons.com/wp-content/uploads/2021/02/Alex.png">
-    </div>
-
-    <div id="Back" class="tabcontent">
-      <h3>Back</h3>
-      <p>This is the back.</p> 
-    </div>
-
-    <div id="Front" class="tabcontent">
-      <h3>Front</h3>
-      <p>This is the front.</p>
-    </div>
+    <?php
+    $images = json_decode($characterData->images);
+    foreach ($images as $image) { ?>
+    <div id="<?php echo $image->title ?>" class="tabcontent" style="<?php if ($image->title == $images[0]->title) { echo "display: block;" }?>">
+      <img width="100%" src="<?php echo $image->url ?>">
+    </div><?php 
+    }?>
   </div>
 
 </div>
