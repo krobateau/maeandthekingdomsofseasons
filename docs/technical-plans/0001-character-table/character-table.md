@@ -3,7 +3,7 @@ Character Table
 
 ![Character Table Workflow](../../images/CharacterTableWorkflow.svg)
 
-## instructions
+## Instructions
 
 To make this work, insert the following code into the wordpress page.
 
