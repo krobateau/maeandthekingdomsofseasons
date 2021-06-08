@@ -70,14 +70,14 @@ $images = $characterData->images == "" ? [] : json_decode($characterData->images
   <div class="tab" style="color: black">
   <?php
     foreach ($images as $image) { ?>
-    <button class="tablinks <?php if ($image->title == $images[0]->title) { echo "active" }?>" onclick="openPose(event, '<?php echo $image->title ?>')"><?php echo $image->title ?></button>
+    <button class="tablinks <?php if ($image->title == $images[0]->title) { echo "active"; } ?>" onclick="openPose(event, '<?php echo $image->title ?>')"><?php echo $image->title ?></button>
     <?php } ?>
   </div>
 
   <div class="tabcontent-container">
     <?php
     foreach ($images as $image) { ?>
-    <div id="<?php echo $image->title ?>" class="tabcontent" style="<?php if ($image->title == $images[0]->title) { echo "display: block;" }?>">
+    <div id="<?php echo $image->title ?>" class="tabcontent" style="<?php if ($image->title == $images[0]->title) { echo "display: block;"; }?>">
       <img width="100%" src="<?php echo $image->url ?>">
     </div><?php 
     }?>
