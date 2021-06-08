@@ -6,8 +6,6 @@ $characterName = $_GET["characterName"];
 $characterData = file_get_contents('https://script.google.com/macros/s/AKfycbwk4hdhsehHOSd_zUdZ2hXvNsTU0TNNQbKM3eX7vwGYhDixptc0/exec?name=' . $characterName);
 ?>
 <style>
-body {font-family: Arial;}
-
 /* Style the tab */
 .tab {
   overflow: hidden;
@@ -96,7 +94,7 @@ body {font-family: Arial;}
       </tr>
       <tr>
         <td class="has-text-align-left" data-align="left">
-          <strong>Full Name: <span><? $characterData->name ?></span>
+          <strong>Full Name: <span><? echo $characterData->name ?></span>
             <br>Nicknames:
             <br>Age:
             <br>Gender:
