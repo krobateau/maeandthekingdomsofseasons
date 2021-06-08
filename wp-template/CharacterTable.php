@@ -94,11 +94,11 @@ $characterData = json_decode(file_get_contents('https://script.google.com/macros
       </tr>
       <tr>
         <td class="has-text-align-left" data-align="left">
-          <strong>Full Name: <span ><?php echo $characterData->name ?></span>
+          <strong>Full Name: <span style="color:black;"><?php echo $characterData->name ?></span>
             <br>Nicknames:
-            <br>Age: <span ><?php echo $characterData->age ?></span>
-            <br>Gender: <span ><?php echo $characterData->gender ?></span>
-            <br>Sexuality: <span ><?php echo $characterData->sexuality ?></span>
+            <br>Age: <span style="color:black;"><?php echo $characterData->age ?></span>
+            <br>Gender: <span style="color:black;"><?php echo $characterData->gender ?></span>
+            <br>Sexuality: <span style="color:black;"><?php echo $characterData->sexuality ?></span>
           </strong>
         </td>
       </tr>
@@ -109,10 +109,10 @@ $characterData = json_decode(file_get_contents('https://script.google.com/macros
       </tr>
       <tr>
         <td class="has-text-align-left" data-align="left">
-          <strong>Parents: <span ><?php echo $characterData->parents ?></span>
-            <br>Siblings: <span ><?php echo $characterData->siblings ?></span>
-            <br>Partner(s): <span ><?php echo $characterData->partner ?></span>
-            <br>Children: <span ><?php echo $characterData->children ?></span>
+          <strong>Parents: <span style="color:black;"><?php echo $characterData->parents ?></span>
+            <br>Siblings: <span style="color:black;"><?php echo $characterData->siblings ?></span>
+            <br>Partner(s): <span style="color:black;"><?php echo $characterData->partner ?></span>
+            <br>Children: <span style="color:black;"><?php echo $characterData->children ?></span>
           </strong>
         </td>
       </tr>
@@ -124,9 +124,9 @@ $characterData = json_decode(file_get_contents('https://script.google.com/macros
       <tr>
         <td class="has-text-align-left" data-align="left">
           <strong>Species:
-            <br>Social Class: <span ><?php echo $characterData->social_class ?></span>
-            <br>Occupation: <span ><?php echo $characterData->occupation ?></span>
-            <br>Home: <span ><?php echo $characterData->home ?></span>
+            <br>Social Class: <span style="color:black;"><?php echo $characterData->social_class ?></span>
+            <br>Occupation: <span style="color:black;"><?php echo $characterData->occupation ?></span>
+            <br>Home: <span style="color:black;"><?php echo $characterData->home ?></span>
           </strong>
         </td>
       </tr>
