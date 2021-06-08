@@ -94,8 +94,7 @@ $characterData = json_decode(file_get_contents('https://script.google.com/macros
       </tr>
       <tr>
         <td class="has-text-align-left" data-align="left">
-          <strong>Full Name: <span style="color:black;"><?php echo $characterData->name ?></span>
-            <br>Nicknames:
+          <strong>Name: <span style="color:black;"><?php echo $characterData->name ?></span>
             <br>Age: <span style="color:black;"><?php echo $characterData->age ?></span>
             <br>Gender: <span style="color:black;"><?php echo $characterData->gender ?></span>
             <br>Sexuality: <span style="color:black;"><?php echo $characterData->sexuality ?></span>
@@ -111,8 +110,10 @@ $characterData = json_decode(file_get_contents('https://script.google.com/macros
         <td class="has-text-align-left" data-align="left">
           <strong>Parents: <span style="color:black;"><?php echo $characterData->parents ?></span>
             <br>Siblings: <span style="color:black;"><?php echo $characterData->siblings ?></span>
-            <br>Partner(s): <span style="color:black;"><?php echo $characterData->partner ?></span>
+            <br>Partner: <span style="color:black;"><?php echo $characterData->partner ?></span>
             <br>Children: <span style="color:black;"><?php echo $characterData->children ?></span>
+            <br>Relatives: <span style="color:black;"><?php echo $characterData->relatives ?></span>
+            <br>Owner: <span style="color:black;"><?php echo $characterData->owner ?></span>
           </strong>
         </td>
       </tr>
@@ -123,10 +124,11 @@ $characterData = json_decode(file_get_contents('https://script.google.com/macros
       </tr>
       <tr>
         <td class="has-text-align-left" data-align="left">
-          <strong>Species:
+          <strong>Species: <span style="color:black;"><?php echo $characterData->species ?></span>
             <br>Social Class: <span style="color:black;"><?php echo $characterData->social_class ?></span>
             <br>Occupation: <span style="color:black;"><?php echo $characterData->occupation ?></span>
             <br>Home: <span style="color:black;"><?php echo $characterData->home ?></span>
+            <br>Appearances: <span style="color:black;"><?php echo $characterData->appearances ?></span>
           </strong>
         </td>
       </tr>
