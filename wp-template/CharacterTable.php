@@ -135,6 +135,3 @@ $characterData = json_decode(file_get_contents('https://script.google.com/macros
     </tbody>
   </table>
 </figure>
-<!-- 
-  {"characterData":{"page_name":"Alex","images":"","name":"Alex of Thatcher and Asha","age":"4 (Asha's Death)","gender":"Female","sexuality":"Straight","parents":"Asha, Thatcher","siblings":"Timber, Nadia, Amber","partner":"","children":"","relatives":"","owner":"","species":"Seiki","social_class":"Higher Class","occupation":"","home":"Seiki Kingdom","appearances":""}}
--->
