@@ -8,6 +8,8 @@ Character Table
 - [Feature: Character information is managed separate from wordpress](#feature-character-information-is-managed-separate-from-wordpress)
   - [Scenario: Manage character information in a table](#scenario-manage-character-information-in-a-table)
   - [Scenario: Provide character information upon request](#scenario-provide-character-information-upon-request)
+- [Feature: Display character information in a table](#feature-display-character-information-in-a-table)
+  - [Scenario: Display the character table inside the character's web page](#scenario-display-the-character-table-inside-the-characters-web-page)
 
 ![Character Table Workflow](../../images/CharacterTableWorkflow.svg)
 
@@ -48,5 +50,15 @@ Provide a way for the character information to be maintained and utilized in oth
 **WHEN** I send a request to get information for a specified character  
 **THEN** I receive that character's information  
 
+# Feature: Display character information in a table
 
+**In order to** teach people about the book, Mae and the Kingdoms of Seasons  
+**As a** content publisher  
+**I want to** display the information in a table inside the character's web page  
+
+## Scenario: Display the character table inside the character's web page
+
+**GIVEN** I have a character web page for character "A"  
+**WHEN** I view the character web page  
+**THEN** I see a table with the character's data in the page  
 
