@@ -167,4 +167,41 @@ jQuery(document).ready(function($) {
 	span.onclick = function() { 
 		document.getElementById("myModal").style.display = "none";
 	}
+
+	// Character Table rendering Code
+	const characterTables = document.getElementsByClassName("character-table");
+	for (i = 0; i < characterTables.length; i++) {
+		const characterName = characterTables[i].getAttribute("name");
+		console.log(characterName);
+		const item = {
+			placeholder: characterTables[i],
+			populate: function(html) {
+				item.placeholder.innerHTML = html;
+			},
+		  fetch: function(characterName){
+				fetch('/charactertable?characterName='+characterName).then(function (response) {
+			    // The API call was successful!
+			    return response.text();
+		    }).then(item.populate).catch(function (err) {
+			    // There was an error
+	  	    console.warn('Something went wrong.', err);
+		    });
+	    }
+	  };
+		item.fetch(characterName);
+	}
 });
+
+function openPose(evt, poseName) {
+	var i, tabcontent, tablinks;
+	tabcontent = document.getElementsByClassName("tabcontent");
+	for (i = 0; i < tabcontent.length; i++) {
+		tabcontent[i].style.display = "none";
+	}
+	tablinks = document.getElementsByClassName("tablinks");
+	for (i = 0; i < tablinks.length; i++) {
+		tablinks[i].className = tablinks[i].className.replace(" active", "");
+	}
+	document.getElementById(poseName).style.display = "block";
+	evt.currentTarget.className += " active";
+}
