@@ -74,4 +74,4 @@ curl -L "https://script.google.com/macros/s/AKfycbwk4hdhsehHOSd_zUdZ2hXvNsTU0TNN
 
 Where the `CHARACTER_NAME` environment variable can be replaced by the name of the character in the data table.
 
-It will return a JSON file containing the character information.
+It will return a JSON string containing the character information.
