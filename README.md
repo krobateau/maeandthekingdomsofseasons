@@ -5,6 +5,7 @@
   - [The Wordpress Template](#the-wordpress-template)
 - [Website usage](#website-usage)
   - [Managing character data](#managing-character-data)
+  - [Retrieving raw character data](#retrieving-raw-character-data)
 
 ## Using Trello and GitHub
 
@@ -62,3 +63,15 @@ Here are the descriptions of the files
 ## Managing character data
 
 Character data is stored in a [data table](https://docs.google.com/spreadsheets/d/1tYCziig9hmANi0z_TAZYVL7dbd5rgF58lTuP_XkFa7s).  Open the data table link to see instruction on how to use it.
+
+## Retrieving raw character data
+
+The character data can be retrieved using the following command.
+
+```bash
+curl -L "https://script.google.com/macros/s/AKfycbwk4hdhsehHOSd_zUdZ2hXvNsTU0TNNQbKM3eX7vwGYhDixptc0/exec?name=${CHARACTER_NAME}"
+```
+
+Where the `CHARACTER_NAME` environment variable can be replaced by the name of the character in the data table.
+
+It will return a JSON file containing the character information.
