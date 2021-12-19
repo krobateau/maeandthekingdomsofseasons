@@ -1,7 +1,10 @@
 # maeandthekingdomsofseasons
 
-- [Using Trello and GitHub](#using-trello-and-github)
-- [The Wordpress Template](#the-wordpress-template)
+- [maeandthekingdomsofseasons](#maeandthekingdomsofseasons)
+  - [Using Trello and GitHub](#using-trello-and-github)
+  - [The Wordpress Template](#the-wordpress-template)
+- [Website usage](#website-usage)
+  - [Managing character data](#managing-character-data)
 
 ## Using Trello and GitHub
 
@@ -54,4 +57,8 @@ Here are the descriptions of the files
 - template-nosidebar.php
   - A page template where there is no sidebar
 
+# Website usage
 
+## Managing character data
+
+Character data is stored in a [data table](https://docs.google.com/spreadsheets/d/1tYCziig9hmANi0z_TAZYVL7dbd5rgF58lTuP_XkFa7s).  Open the data table link to see instruction on how to use it.
