@@ -89,8 +89,10 @@ $images = $characterData->images == "" ? [] : json_decode($characterData->images
     <table>
       <tbody>
         <tr>
-          <td class="has-text-align-left" data-align="left" style="background-color: #194515;border-radius: 10px;border-color: #0b280c;">
-            <strong>Biography</strong>
+          <td class="has-text-align-left" data-align="left">
+            <div style="background-color: #194515;border-radius: 10px;border: 2px solid #0b280c;">
+              <strong>Biography</strong>
+            </div>
           </td>
         </tr>
         <tr>
