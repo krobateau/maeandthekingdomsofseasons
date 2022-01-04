@@ -84,54 +84,68 @@ $images = $characterData->images == "" ? [] : json_decode($characterData->images
   </div>
 
 </div>
-<figure class="wp-block-table m0 is-style-regular">
-  <table>
-    <tbody>
-      <tr>
-        <td class="has-text-align-left" data-align="left">
-          <strong>Biography</strong>
-        </td>
-      </tr>
-      <tr>
-        <td class="has-text-align-left" data-align="left">
-          <strong>Name: <span style="color:black;"><?php echo $characterData->name ?></span>
-            <span style="<?php getVisibleStyle($characterData->age) ?>"><br>Age: <span style="color:black;"><?php echo $characterData->age ?></span></span>
-            <span style="<?php getVisibleStyle($characterData->gender) ?>"><br>Gender: <span style="color:black;"><?php echo $characterData->gender ?></span></span>
-            <span style="<?php getVisibleStyle($characterData->sexuality) ?>"><br>Sexuality: <span style="color:black;"><?php echo $characterData->sexuality ?></span></span>
-          </strong>
-        </td>
-      </tr>
-      <tr>
-        <td class="has-text-align-left" data-align="left">
-          <strong>Family</strong>
-        </td>
-      </tr>
-      <tr>
-        <td class="has-text-align-left" data-align="left">
-          <strong><span style="<?php getVisibleStyle($characterData->parents) ?>">Parents: <span style="color:black;"><?php echo $characterData->parents ?></span></span>
-            <span style="<?php getVisibleStyle($characterData->siblings) ?>"><br>Siblings: <span style="color:black;"><?php echo $characterData->siblings ?></span></span>
-            <span style="<?php getVisibleStyle($characterData->partner) ?>"><br>Partner: <span style="color:black;"><?php echo $characterData->partner ?></span></span>
-            <span style="<?php getVisibleStyle($characterData->children) ?>"><br>Children: <span style="color:black;"><?php echo $characterData->children ?></span></span>
-            <span style="<?php getVisibleStyle($characterData->relatives) ?>"><br>Relatives: <span style="color:black;"><?php echo $characterData->relatives ?></span></span>
-            <span style="<?php getVisibleStyle($characterData->owner) ?>"><br>Owner: <span style="color:black;"><?php echo $characterData->owner ?></span></span>
-          </strong>
-        </td>
-      </tr>
-      <tr>
-        <td class="has-text-align-left" data-align="left">
-          <strong>Status</strong>
-        </td>
-      </tr>
-      <tr>
-        <td class="has-text-align-left" data-align="left">
-          <strong><span style="<?php getVisibleStyle($characterData->species) ?>">Species: <span style="color:black;"><?php echo $characterData->species ?></span></span>
-            <span style="<?php getVisibleStyle($characterData->social_class) ?>"><br>Social Class: <span style="color:black;"><?php echo $characterData->social_class ?></span></span>
-            <span style="<?php getVisibleStyle($characterData->occupation) ?>"><br>Occupation: <span style="color:black;"><?php echo $characterData->occupation ?></span></span>
-            <span style="<?php getVisibleStyle($characterData->home) ?>"><br>Home: <span style="color:black;"><?php echo $characterData->home ?></span></span>
-            <span style="<?php getVisibleStyle($characterData->appearances) ?>"><br>Appearances: <span style="color:black;"><?php echo $characterData->appearances ?></span></span>
-          </strong>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</figure>
+<div class="tabcontent-container" style="padding: 14px 14px 14px;">
+  <figure class="wp-block-table m0 is-style-regular" style="border: 0px">
+    <table>
+      <tbody>
+        <tr>
+          <td class="has-text-align-left" data-align="left" style="padding: 0px">
+            <div style="background-color: #194515;border-radius: 10px;border: 2px solid #0b280c;padding: 5px;">
+              <strong>Biography</strong>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="has-text-align-left" data-align="left" style="padding: 0px">
+            <div style="background-color: #fff9ed; border-radius: 10px; padding: 12px; margin: 10px 0; border: 2px solid #0b280c;">
+              <strong>Name: <span style="color:black;"><?php echo $characterData->name ?></span>
+                <span style="<?php getVisibleStyle($characterData->age) ?>"><br>Age: <span style="color:black;"><?php echo $characterData->age ?></span></span>
+                <span style="<?php getVisibleStyle($characterData->gender) ?>"><br>Gender: <span style="color:black;"><?php echo $characterData->gender ?></span></span>
+                <span style="<?php getVisibleStyle($characterData->sexuality) ?>"><br>Sexuality: <span style="color:black;"><?php echo $characterData->sexuality ?></span></span>
+              </strong>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="has-text-align-left" data-align="left" style="padding: 0px">
+            <div style="background-color: #194515;border-radius: 10px;border: 2px solid #0b280c;padding: 5px;">
+              <strong>Family</strong>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="has-text-align-left" data-align="left" style="padding: 0px">
+            <div style="background-color: #fff9ed; border-radius: 10px; padding: 12px; margin: 10px 0; border: 2px solid #0b280c;">
+              <strong><span style="<?php getVisibleStyle($characterData->parents) ?>">Parents: <span style="color:black;"><?php echo $characterData->parents ?></span></span>
+                <span style="<?php getVisibleStyle($characterData->siblings) ?>"><br>Siblings: <span style="color:black;"><?php echo $characterData->siblings ?></span></span>
+                <span style="<?php getVisibleStyle($characterData->partner) ?>"><br>Partner: <span style="color:black;"><?php echo $characterData->partner ?></span></span>
+                <span style="<?php getVisibleStyle($characterData->children) ?>"><br>Children: <span style="color:black;"><?php echo $characterData->children ?></span></span>
+                <span style="<?php getVisibleStyle($characterData->relatives) ?>"><br>Relatives: <span style="color:black;"><?php echo $characterData->relatives ?></span></span>
+                <span style="<?php getVisibleStyle($characterData->owner) ?>"><br>Owner: <span style="color:black;"><?php echo $characterData->owner ?></span></span>
+              </strong>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="has-text-align-left" data-align="left" style="padding: 0px">
+            <div style="background-color: #194515;border-radius: 10px;border: 2px solid #0b280c;padding: 5px;">
+              <strong>Status</strong>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="has-text-align-left" data-align="left" style="padding: 0px">
+            <div style="background-color: #fff9ed; border-radius: 10px; padding: 12px; margin: 10px 0; border: 2px solid #0b280c;">
+              <strong><span style="<?php getVisibleStyle($characterData->species) ?>">Species: <span style="color:black;"><?php echo $characterData->species ?></span></span>
+                <span style="<?php getVisibleStyle($characterData->social_class) ?>"><br>Social Class: <span style="color:black;"><?php echo $characterData->social_class ?></span></span>
+                <span style="<?php getVisibleStyle($characterData->occupation) ?>"><br>Occupation: <span style="color:black;"><?php echo $characterData->occupation ?></span></span>
+                <span style="<?php getVisibleStyle($characterData->home) ?>"><br>Home: <span style="color:black;"><?php echo $characterData->home ?></span></span>
+                <span style="<?php getVisibleStyle($characterData->appearances) ?>"><br>Appearances: <span style="color:black;"><?php echo $characterData->appearances ?></span></span>
+              </strong>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </figure>
+</div>
