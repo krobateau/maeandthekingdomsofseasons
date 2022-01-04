@@ -89,7 +89,7 @@ $images = $characterData->images == "" ? [] : json_decode($characterData->images
     <table>
       <tbody>
         <tr>
-          <td class="has-text-align-left" data-align="left">
+          <td class="has-text-align-left" data-align="left" style="background-color: #194515;border-radius: 10px;border-color: #0b280c;">
             <strong>Biography</strong>
           </td>
         </tr>
@@ -103,7 +103,7 @@ $images = $characterData->images == "" ? [] : json_decode($characterData->images
           </td>
         </tr>
         <tr>
-          <td class="has-text-align-left" data-align="left">
+          <td class="has-text-align-left" data-align="left" style="background-color: #194515;border-radius: 10px;border-color: #0b280c;">
             <strong>Family</strong>
           </td>
         </tr>
@@ -119,7 +119,7 @@ $images = $characterData->images == "" ? [] : json_decode($characterData->images
           </td>
         </tr>
         <tr>
-          <td class="has-text-align-left" data-align="left">
+          <td class="has-text-align-left" data-align="left" style="background-color: #194515;border-radius: 10px;border-color: #0b280c;">
             <strong>Status</strong>
           </td>
         </tr>
