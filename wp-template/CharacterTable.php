@@ -90,7 +90,7 @@ $images = $characterData->images == "" ? [] : json_decode($characterData->images
       <tbody>
         <tr>
           <td class="has-text-align-left" data-align="left" style="padding: 0px">
-            <div style="background-color: #194515;border-radius: 10px;border: 2px solid #0b280c;">
+            <div style="background-color: #194515;border-radius: 10px;border: 2px solid #0b280c;padding: 5px;">
               <strong>Biography</strong>
             </div>
           </td>
@@ -106,7 +106,7 @@ $images = $characterData->images == "" ? [] : json_decode($characterData->images
         </tr>
         <tr>
           <td class="has-text-align-left" data-align="left" style="padding: 0px">
-            <div style="background-color: #194515;border-radius: 10px;border: 2px solid #0b280c;">
+            <div style="background-color: #194515;border-radius: 10px;border: 2px solid #0b280c;padding: 5px;">
               <strong>Family</strong>
             </div>
           </td>
@@ -124,7 +124,7 @@ $images = $characterData->images == "" ? [] : json_decode($characterData->images
         </tr>
         <tr>
           <td class="has-text-align-left" data-align="left" style="padding: 0px">
-            <div style="background-color: #194515;border-radius: 10px;border: 2px solid #0b280c;">
+            <div style="background-color: #194515;border-radius: 10px;border: 2px solid #0b280c;padding: 5px;">
               <strong>Status</strong>
             </div>
           </td>
