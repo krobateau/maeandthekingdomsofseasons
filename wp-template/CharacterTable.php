@@ -84,7 +84,7 @@ $images = $characterData->images == "" ? [] : json_decode($characterData->images
   </div>
 
 </div>
-<div class="tabcontent-container" style="padding: 14px 14px 14px;">
+<div class="tabcontent-container" style="padding: 14px 14px 14px; border-radius: 0px 0px 10px 10px">
   <figure class="wp-block-table m0 is-style-regular" style="border: 0px">
     <table>
       <tbody>
