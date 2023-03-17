@@ -100,7 +100,7 @@ $images = $characterData->images == "" ? [] : json_decode($characterData->images
             <div style="background-color: #fff9ed; border-radius: 10px; padding: 12px; margin: 10px 0; border: 2px solid #0b280c;">
               <strong>Name: <span style="color:#70401e; font-weight: normal;"><?php echo $characterData->name ?></span>
                 <span style="<?php getVisibleStyle($characterData->age) ?>"><br>Age: <span style="color:#70401e; font-weight: normal"><?php echo $characterData->age ?></span></span>
-                <span style="<?php getVisibleStyle($characterData->gender) ?>"><br>Gender: <span style="color:#70401e; font-weight: normal"><?php echo $characterData->gender ?></span></span>
+                <span style="<?php getVisibleStyle($characterData->gender_identity) ?>"><br>Gender Identity: <span style="color:#70401e; font-weight: normal"><?php echo $characterData->gender_identity ?></span></span>
                 <span style="<?php getVisibleStyle($characterData->sexuality) ?>"><br>Sexuality: <span style="color:#70401e; font-weight: normal"><?php echo $characterData->sexuality ?></span></span>
               </strong>
             </div>
