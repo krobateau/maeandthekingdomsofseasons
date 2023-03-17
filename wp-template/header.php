@@ -60,7 +60,7 @@
 					
 						<?php elseif ( $blog_title || $blog_description ) : ?>
 					
-							<div class="blog-info">
+							<div class="blog-info" style="visibility:hidden">
 							
 								<?php if ( $blog_title ) : ?>
 									<<?php echo $blog_title_elem; ?> class="blog-title">
