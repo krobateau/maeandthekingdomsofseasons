@@ -96,7 +96,7 @@ $images = $characterData->images == "" ? [] : json_decode($characterData->images
           </td>
         </tr>
         <tr>
-          <td class="has-text-align-left" data-align="left" style="padding: 0px">
+          <td class="has-text-align-left" data-align="left" style="padding: 0px; background-color: inherit;">
             <div style="background-color: #fff9ed; border-radius: 10px; padding: 12px; margin: 10px 0; border: 2px solid #0b280c;">
               <strong>Name: <span style="color:#70401e; font-weight: normal;"><?php echo $characterData->name ?></span>
                 <span style="<?php getVisibleStyle($characterData->age) ?>"><br>Age: <span style="color:#70401e; font-weight: normal"><?php echo $characterData->age ?></span></span>
@@ -107,14 +107,14 @@ $images = $characterData->images == "" ? [] : json_decode($characterData->images
           </td>
         </tr>
         <tr>
-          <td class="has-text-align-left" data-align="left" style="padding: 0px">
+          <td class="has-text-align-left" data-align="left" style="padding: 0px; background-color: inherit;">
             <div style="background-color: #194515;border-radius: 10px;border: 2px solid #0b280c;padding: 5px;">
               <strong>Family</strong>
             </div>
           </td>
         </tr>
         <tr>
-          <td class="has-text-align-left" data-align="left" style="padding: 0px">
+          <td class="has-text-align-left" data-align="left" style="padding: 0px; background-color: inherit;">
             <div style="background-color: #fff9ed; border-radius: 10px; padding: 12px; margin: 10px 0; border: 2px solid #0b280c;">
               <strong><span style="<?php getVisibleStyle($characterData->parents) ?>">Parents: <span style="color:#70401e; font-weight: normal"><?php echo $characterData->parents ?></span></span>
                 <span style="<?php getVisibleStyle($characterData->siblings) ?>"><br>Siblings: <span style="color:#70401e; font-weight: normal;"><?php echo $characterData->siblings ?></span></span>
@@ -127,14 +127,14 @@ $images = $characterData->images == "" ? [] : json_decode($characterData->images
           </td>
         </tr>
         <tr>
-          <td class="has-text-align-left" data-align="left" style="padding: 0px">
+          <td class="has-text-align-left" data-align="left" style="padding: 0px; background-color: inherit;">
             <div style="background-color: #194515;border-radius: 10px;border: 2px solid #0b280c;padding: 5px;">
               <strong>Status</strong>
             </div>
           </td>
         </tr>
         <tr>
-          <td class="has-text-align-left" data-align="left" style="padding: 0px">
+          <td class="has-text-align-left" data-align="left" style="padding: 0px; background-color: inherit;">
             <div style="background-color: #fff9ed; border-radius: 10px; padding: 12px; margin: 10px 0; border: 2px solid #0b280c;">
               <strong><span style="<?php getVisibleStyle($characterData->species) ?>">Species: <span style="color:#70401e; font-weight: normal;"><?php echo $characterData->species ?></span></span>
                 <span style="<?php getVisibleStyle($characterData->social_class) ?>"><br>Social Class: <span style="color:#70401e; font-weight: normal;"><?php echo $characterData->social_class ?></span></span>
