@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Run a one-line script
         run: echo Hello, world!
 
@@ -20,9 +20,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get latest code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Install rclone
-        run: sudo apt-get install rclone
+        run: |
+          sudo apt-get update
+          sudo apt-get install rclone
       - name: Set the template name in TEST
         if: github.ref != 'refs/heads/main'
         run: sed -i 's/[$]{theme_name}/(Test) Mae and the Kingdoms of Seasons/' wp-template/style.css

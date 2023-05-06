@@ -1,7 +1,12 @@
 # maeandthekingdomsofseasons
 
-- [Using Trello and GitHub](#using-trello-and-github)
-- [The Wordpress Template](#the-wordpress-template)
+- [maeandthekingdomsofseasons](#maeandthekingdomsofseasons)
+  - [Using Trello and GitHub](#using-trello-and-github)
+  - [The Wordpress Template](#the-wordpress-template)
+- [Website usage](#website-usage)
+  - [Managing character data](#managing-character-data)
+  - [Retrieving raw character data](#retrieving-raw-character-data)
+  - [Rendering a Character table](#rendering-a-character-table)
 
 ## Using Trello and GitHub
 
@@ -54,4 +59,32 @@ Here are the descriptions of the files
 - template-nosidebar.php
   - A page template where there is no sidebar
 
+# Website usage
 
+## Managing character data
+
+Character data is stored in a [data table](https://docs.google.com/spreadsheets/d/1tYCziig9hmANi0z_TAZYVL7dbd5rgF58lTuP_XkFa7s).  Open the data table link to see instruction on how to use it.
+
+## Retrieving raw character data
+
+The character data can be retrieved using the following command.
+
+```bash
+curl -L "https://script.google.com/macros/s/AKfycbwk4hdhsehHOSd_zUdZ2hXvNsTU0TNNQbKM3eX7vwGYhDixptc0/exec?name=${CHARACTER_NAME}"
+```
+
+Where the `CHARACTER_NAME` environment variable can be replaced by the name of the character in the [data table](https://docs.google.com/spreadsheets/d/1tYCziig9hmANi0z_TAZYVL7dbd5rgF58lTuP_XkFa7s).
+
+It will return a JSON string containing the character information.
+
+## Rendering a Character table
+
+The character table can be embedded in any word press content page by adding a HTML block with the following code
+
+```html
+<div class="character-table" name="${character_name}"></div>
+```
+
+Where the `${character_name}` is the name of the character as it is written in the `Page Name` field of the [data table](https://docs.google.com/spreadsheets/d/1tYCziig9hmANi0z_TAZYVL7dbd5rgF58lTuP_XkFa7s).
+
+The table will be rendered automatically upon viewing the page.
