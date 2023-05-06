@@ -1,54 +1,58 @@
-	<div class="footer section large-padding bg-dark">
-		
-		<div class="footer-inner section-inner group">
-		
-			<?php if ( is_active_sidebar( 'footer-a' ) ) : ?>
+	<div class="mae-footer">
+
+		<div class="footer section large-padding bg-mae">
 			
-				<div class="column column-1 left">
+			<div class="footer-inner section-inner group">
+			
+				<?php if ( is_active_sidebar( 'footer-a' ) ) : ?>
 				
-					<div class="widgets">
-			
-						<?php dynamic_sidebar( 'footer-a' ); ?>
-											
+					<div class="column column-1 left">
+					
+						<div class="widgets">
+				
+							<?php dynamic_sidebar( 'footer-a' ); ?>
+												
+						</div>
+						
 					</div>
 					
-				</div>
-				
-			<?php endif; ?><!-- .footer-a -->
-				
-			<?php if ( is_active_sidebar( 'footer-b' ) ) : ?>
-			
-				<div class="column column-2 left">
-				
-					<div class="widgets">
-			
-						<?php dynamic_sidebar( 'footer-b' ); ?>
-											
-					</div><!-- .widgets -->
+				<?php endif; ?><!-- .footer-a -->
 					
-				</div>
+				<?php if ( is_active_sidebar( 'footer-b' ) ) : ?>
 				
-			<?php endif; ?><!-- .footer-b -->
-								
-			<?php if ( is_active_sidebar( 'footer-c' ) ) : ?>
-			
-				<div class="column column-3 left">
-			
-					<div class="widgets">
-			
-						<?php dynamic_sidebar( 'footer-c' ); ?>
-											
-					</div><!-- .widgets -->
+					<div class="column column-2 left">
 					
-				</div>
+						<div class="widgets">
 				
-			<?php endif; ?><!-- .footer-c -->
+							<?php dynamic_sidebar( 'footer-b' ); ?>
+												
+						</div><!-- .widgets -->
+						
+					</div>
 					
-		</div><!-- .footer-inner -->
-	
-	</div><!-- .footer -->
-	
-	<div class="credits section bg-dark no-padding">
+				<?php endif; ?><!-- .footer-b -->
+									
+				<?php if ( is_active_sidebar( 'footer-c' ) ) : ?>
+				
+					<div class="column column-3 left">
+				
+						<div class="widgets">
+				
+							<?php dynamic_sidebar( 'footer-c' ); ?>
+												
+						</div><!-- .widgets -->
+						
+					</div>
+					
+				<?php endif; ?><!-- .footer-c -->
+						
+			</div><!-- .footer-inner -->
+		
+		</div><!-- .footer -->
+		
+  
+	</div><!-- .mae-footer -->
+	<div class="credits section bg-mae no-padding">
 	
 		<div class="credits-inner section-inner group">
 	
@@ -57,7 +61,9 @@
 			</p>
 			
 			<p class="credits-right">
-				<span><?php printf( __( 'Theme by <a href="%s">Anders Noren</a>', 'hemingway' ), 'https://www.andersnoren.se' ); ?></span> &mdash; <a title="<?php _e( 'To the top', 'hemingway' ); ?>" class="tothetop"><?php _e( 'Up', 'hemingway' ); ?> &uarr;</a>
+				<span><?php printf( __( 'Base theme by <a href="%s">Anders Noren</a>', 'hemingway' ), 'https://www.andersnoren.se' ); ?></span> &mdash; <a title="<?php _e( 'To the top', 'hemingway' ); ?>" class="tothetop"><?php _e( 'Up', 'hemingway' ); ?> &uarr;</a>
+				<br>
+				<span><?php printf( __( 'Customized theme by <a href="%s">Ansel Robateau</a> and <a href="%s">Kyla Robateau</a>', 'hemingway' ), 'https://www.robaone.com', 'https://bugmangaka.carrd.co' ); ?></span>
 			</p>
 					
 		</div><!-- .credits-inner -->
@@ -68,5 +74,10 @@
 
 <?php wp_footer(); ?>
 
+<div id="myModal" class="modal">
+	<span id="modalClose">&times;</span>
+	<img class="modal-content" id="modalImage">
+	<div id="caption"></div>
+</div>
 </body>
 </html>

@@ -197,7 +197,7 @@ h1, h2, h3, h4, h5, h6, .faux-heading {
 
 h1 { font-size: 2em; }
 h2 { font-size: 20pt; border-bottom: 1px solid #cfac86; }
-h3 { font-size: 1.5em; }
+h3 { font-size: 1.0em; border-bottom: 1px solid #cfac86; }
 h4 { font-size: 1.25em; }
 h5 { font-size: 1.1em; }
 h6 { font-size: 1em; }
@@ -676,7 +676,6 @@ input[type="submit"]:hover {
 
 .blog-menu > li + li:before {
 	color: #444;
-	content: "/";
 	display: block;
 	font-size: 16px;
 	line-height: 1;
@@ -2282,14 +2281,13 @@ p.form-allowed-tags {
 }
 
 .credits-inner {
-	border-top: 2px solid rgba(255,255,255,0.1);
 	letter-spacing: 1px;
 	padding: 25px 0 4%;
 	text-transform: uppercase;
 }
 
 .credits {
-	color: #858585;
+	color: #fff9ed;
 }
 
 .credits a,
@@ -2302,6 +2300,10 @@ p.form-allowed-tags {
 
 .tothetop:hover {
 	cursor: pointer;
+}
+
+div.credits {
+	background-color: #cfac86;
 }
 
 
@@ -2687,7 +2689,7 @@ p.form-allowed-tags {
 	/* Credits ------------------------------- */
 
 	.credits.section {
-		border-top: 1px solid rgba( 255, 255, 255, .1 );
+		
 	}
 
 	.credits-inner {
@@ -2854,7 +2856,6 @@ p.form-allowed-tags {
  .m0 table {
   margin-top:0; 
   margin-bottom:0;
-  :nth-child(odd) {background-color: #bae8ff;}
 }
 .m0 tbody {
   border-width:0;
@@ -2872,9 +2873,10 @@ p.form-allowed-tags {
 }
 
 .m0 {
-  border-left: 1px solid #0b280c;
-  border-right: 1px solid #0b280c;
-  border-bottom: 1px solid #0b280c;
+  border-left: 2px solid #0b280c;
+  border-right: 2px solid #0b280c;
+  border-bottom: 2px solid #0b280c;
+	border-radius: 0px 0px 10px 10px;
 }
 
 hr.m0 {
@@ -2882,3 +2884,192 @@ hr.m0 {
   width: 100px;
 }
 
+/* Thumbnails -------------------------------*/
+figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure img {
+  height: 160px;
+	border: 1px solid #CFAC86;
+	cursor: pointer;
+}
+
+figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure img:hover {
+  border-color: #70401e
+}
+
+div.image-wrap {
+	border: 1px solid #CFAC86;
+}
+
+div.image-wrap:hover {
+	border: 1px solid #70401e;
+}
+
+figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure img[src*=transparent] 
+{
+	border: none;
+	cursor: default;
+}
+
+figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure figcaption
+{
+	color: #cfac86;
+  background: #fff9ed;
+  padding-top: .7em;
+  padding-bottom: .7em;
+  padding-left: .77em;
+  padding-right: .77em;
+	border-top: 1px solid #CFAC86
+}
+
+figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure img[src*=transparent] + figcaption
+{
+	border: none;
+}
+
+figcaption.my-thumbnail-hover
+{
+	border-top-color: #70401e !important;
+}
+
+figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure img[src*=spoiler].spoiler-image
+{
+	opacity: 0.1 !important;
+	border: none;
+}
+
+img.reveal-image
+{
+	border: none !important;
+}
+
+/*------------------  Spoilers ----------------------------------*/
+.spoiler {
+  background-color: #fff9ed;
+  color: #70401e;
+  cursor: pointer;
+  padding: 1px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 14px;
+}
+
+.active, .spoiler:hover {
+  text-decoration: underline;
+}
+
+
+/* Style the collapsible content. Note: hidden by default */
+.spoiler-content {
+  padding: 0px;
+  display: none;
+  overflow: hidden;
+  background-color: #fff9ed;
+}
+
+div.spoiler i.arrow {
+  border: solid #70401e;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+
+div.active i.arrow {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.trivia-text {
+	font-size: 10pt;
+}
+
+/*--------------Modal Image -----------------------*/
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: auto;
+	height: auto;
+  max-width: 700px;
+	max-height:90%;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+/*.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}*/
+
+/* The Close Button */
+#modalClose {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#modalClose:hover,
+#modalClose:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+.mae-footer {
+	background-image: url("https://maeandthekingdomsofseasons.com/wp-content/uploads/2021/04/Website-Background-2.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 358px;
+}

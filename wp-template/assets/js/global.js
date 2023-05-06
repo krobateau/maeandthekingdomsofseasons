@@ -82,5 +82,126 @@ jQuery(document).ready(function($) {
         return false;
     });
 	
+	// Gallery hover styling
+	const galleryImages = $('figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure img')
+	
+	galleryImages.mouseenter(function(){
+    if(!$(this).attr('src').includes('transparent')){
+		  $(this).next().addClass('my-thumbnail-hover');
+		}
+	});
 
+	galleryImages.mouseleave(function(){
+    if(!$(this).attr('src').includes('transparent')){
+		  $(this).next().removeClass('my-thumbnail-hover');
+		}
+	});
+	
+	// Spoiler section
+	const spoilerImages = $('figure.my-thumbnail .blocks-gallery-grid .blocks-gallery-item figure img[src*=spoiler]');
+	for(i = 0; i < spoilerImages.length; i++){
+		const figcaption = $(spoilerImages[i].nextElementSibling);
+		const originalValue = figcaption.html();
+		figcaption.attr("alt",originalValue);
+		figcaption.html("Spoiler - click to reveal");
+	};
+	spoilerImages.addClass("spoiler-image");
+	spoilerImages.wrap('<div class=image-wrap></div>');
+
+	$('.my-thumbnail div.image-wrap').mouseenter(function(){
+		$(this).next().addClass('my-thumbnail-hover');
+	});
+	$('.my-thumbnail div.image-wrap').mouseleave(function(){
+		$(this).next().removeClass('my-thumbnail-hover');
+	})
+  
+  var coll = document.getElementsByClassName("spoiler");
+  var i;
+  
+	// Spoiler reveal
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      this.firstChild.class = "arrow down";
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+  const showLargeImage = function() {
+		if($(this).hasClass('spoiler-image')){
+			return;
+		}
+		var modal = document.getElementById("myModal");
+
+	  // Get the image and insert it inside the modal - use its "alt" text as a caption
+	  var img = $(this)
+	  var modalImg = document.getElementById("modalImage");;
+	    
+		modal.style.display = "block";
+		modalImg.src = img.attr('src');
+	};
+
+	for (i = 0; i < spoilerImages.length; i++){
+		const image = spoilerImages[i];
+		image.addEventListener("click", function() {
+			if($(this).hasClass('spoiler-image')){
+				$(this).removeClass('spoiler-image');
+				$(this).addClass('reveal-image');
+				const figcaption = $(this).parent().next();
+				const caption = figcaption.attr('alt');
+				figcaption.html(caption);
+				$(this).on('click', showLargeImage);
+			}
+		});
+	}
+
+	galleryImages.filter(function(){
+		return !$(this).hasClass('spoiler-image') && !$(this).attr('src').includes('transparent');
+	}).on('click', showLargeImage);
+	// Get the <span> element that closes the modal
+	var span = document.getElementById("modalClose");
+	span.onclick = function() { 
+		document.getElementById("myModal").style.display = "none";
+	}
+
+	// Character Table rendering Code
+	const characterTables = document.getElementsByClassName("character-table");
+	for (i = 0; i < characterTables.length; i++) {
+		const characterName = characterTables[i].getAttribute("name");
+		console.log(characterName);
+		const item = {
+			placeholder: characterTables[i],
+			populate: function(html) {
+				item.placeholder.innerHTML = html;
+			},
+		  fetch: function(characterName){
+				fetch('/charactertable?characterName='+characterName).then(function (response) {
+			    // The API call was successful!
+			    return response.text();
+		    }).then(item.populate).catch(function (err) {
+			    // There was an error
+	  	    console.warn('Something went wrong.', err);
+		    });
+	    }
+	  };
+		item.fetch(characterName);
+	}
 });
+
+function openPose(evt, poseName) {
+	var i, tabcontent, tablinks;
+	tabcontent = document.getElementsByClassName("tabcontent");
+	for (i = 0; i < tabcontent.length; i++) {
+		tabcontent[i].style.display = "none";
+	}
+	tablinks = document.getElementsByClassName("tablinks");
+	for (i = 0; i < tablinks.length; i++) {
+		tablinks[i].className = tablinks[i].className.replace(" active", "");
+	}
+	document.getElementById(poseName).style.display = "block";
+	evt.currentTarget.className += " active";
+}
