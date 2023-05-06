@@ -61,4 +61,3 @@ Provide a way for the character information to be maintained and utilized in oth
 **GIVEN** I have a character web page for character "A"  
 **WHEN** I view the character web page  
 **THEN** I see a table with the character's data in the page  
-
