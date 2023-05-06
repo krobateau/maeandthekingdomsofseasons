@@ -2856,7 +2856,6 @@ div.credits {
  .m0 table {
   margin-top:0; 
   margin-bottom:0;
-  :nth-child(odd) {background-color: #bae8ff;}
 }
 .m0 tbody {
   border-width:0;
