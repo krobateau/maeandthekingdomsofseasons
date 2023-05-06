@@ -91,14 +91,14 @@ $images = $characterData->images == "" ? [] : json_decode($characterData->images
         <tr>
           <td class="has-text-align-left" data-align="left" style="padding: 0px">
             <div style="background-color: #194515;border-radius: 10px;border: 2px solid #0b280c;padding: 5px;">
-              <strong>Biography</strong>
+              <strong style="background-color: inherit;">Biography</strong>
             </div>
           </td>
         </tr>
         <tr>
-          <td class="has-text-align-left" data-align="left" style="padding: 0px">
+          <td class="has-text-align-left" data-align="left" style="padding: 0px; background-color: inherit;">
             <div style="background-color: #fff9ed; border-radius: 10px; padding: 12px; margin: 10px 0; border: 2px solid #0b280c;">
-              <strong>Name: <span style="color:#70401e; font-weight: normal;"><?php echo $characterData->name ?></span>
+              <strong style="background-color: inherit;">Name: <span style="color:#70401e; font-weight: normal;"><?php echo $characterData->name ?></span>
                 <span style="<?php getVisibleStyle($characterData->age) ?>"><br>Age: <span style="color:#70401e; font-weight: normal"><?php echo $characterData->age ?></span></span>
                 <span style="<?php getVisibleStyle($characterData->gender_identity) ?>"><br>Gender Identity: <span style="color:#70401e; font-weight: normal"><?php echo $characterData->gender_identity ?></span></span>
                 <span style="<?php getVisibleStyle($characterData->sexuality) ?>"><br>Sexuality: <span style="color:#70401e; font-weight: normal"><?php echo $characterData->sexuality ?></span></span>
@@ -107,16 +107,16 @@ $images = $characterData->images == "" ? [] : json_decode($characterData->images
           </td>
         </tr>
         <tr>
-          <td class="has-text-align-left" data-align="left" style="padding: 0px">
+          <td class="has-text-align-left" data-align="left" style="padding: 0px; background-color: inherit;">
             <div style="background-color: #194515;border-radius: 10px;border: 2px solid #0b280c;padding: 5px;">
-              <strong>Family</strong>
+              <strong style="background-color: inherit;">Family</strong>
             </div>
           </td>
         </tr>
         <tr>
-          <td class="has-text-align-left" data-align="left" style="padding: 0px">
+          <td class="has-text-align-left" data-align="left" style="padding: 0px; background-color: inherit;">
             <div style="background-color: #fff9ed; border-radius: 10px; padding: 12px; margin: 10px 0; border: 2px solid #0b280c;">
-              <strong><span style="<?php getVisibleStyle($characterData->parents) ?>">Parents: <span style="color:#70401e; font-weight: normal"><?php echo $characterData->parents ?></span></span>
+              <strong style="background-color: inherit;"><span style="<?php getVisibleStyle($characterData->parents) ?>">Parents: <span style="color:#70401e; font-weight: normal"><?php echo $characterData->parents ?></span></span>
                 <span style="<?php getVisibleStyle($characterData->siblings) ?>"><br>Siblings: <span style="color:#70401e; font-weight: normal;"><?php echo $characterData->siblings ?></span></span>
                 <span style="<?php getVisibleStyle($characterData->partner) ?>"><br>Partner: <span style="color:#70401e; font-weight: normal;"><?php echo $characterData->partner ?></span></span>
                 <span style="<?php getVisibleStyle($characterData->children) ?>"><br>Children: <span style="color:#70401e; font-weight: normal;"><?php echo $characterData->children ?></span></span>
@@ -127,16 +127,16 @@ $images = $characterData->images == "" ? [] : json_decode($characterData->images
           </td>
         </tr>
         <tr>
-          <td class="has-text-align-left" data-align="left" style="padding: 0px">
+          <td class="has-text-align-left" data-align="left" style="padding: 0px; background-color: inherit;">
             <div style="background-color: #194515;border-radius: 10px;border: 2px solid #0b280c;padding: 5px;">
-              <strong>Status</strong>
+              <strong style="background-color: inherit;">Status</strong>
             </div>
           </td>
         </tr>
         <tr>
-          <td class="has-text-align-left" data-align="left" style="padding: 0px">
+          <td class="has-text-align-left" data-align="left" style="padding: 0px; background-color: inherit;">
             <div style="background-color: #fff9ed; border-radius: 10px; padding: 12px; margin: 10px 0; border: 2px solid #0b280c;">
-              <strong><span style="<?php getVisibleStyle($characterData->species) ?>">Species: <span style="color:#70401e; font-weight: normal;"><?php echo $characterData->species ?></span></span>
+              <strong style="background-color: inherit;"><span style="<?php getVisibleStyle($characterData->species) ?>">Species: <span style="color:#70401e; font-weight: normal;"><?php echo $characterData->species ?></span></span>
                 <span style="<?php getVisibleStyle($characterData->social_class) ?>"><br>Social Class: <span style="color:#70401e; font-weight: normal;"><?php echo $characterData->social_class ?></span></span>
                 <span style="<?php getVisibleStyle($characterData->occupation) ?>"><br>Occupation: <span style="color:#70401e; font-weight: normal;"><?php echo $characterData->occupation ?></span></span>
                 <span style="<?php getVisibleStyle($characterData->home) ?>"><br>Home: <span style="color:#70401e; font-weight: normal;"><?php echo $characterData->home ?></span></span>
